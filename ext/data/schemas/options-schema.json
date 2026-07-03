@@ -590,7 +590,7 @@
                                         "type": "array",
                                         "default": [
                                             {
-                                                "include": "none",
+                                                "include": "shift",
                                                 "exclude": "mouse0",
                                                 "types": {
                                                     "mouse": true,
