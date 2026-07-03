@@ -1,118 +1,90 @@
-# Yomitan
+# Wanchan (Yomitan atšaka)
 
-[![Get Yomitan for Chrome](<https://img.shields.io/chrome-web-store/v/likgccmbimhjbgkjambclfkhldnlhbnn?logo=Google%20Chrome&style=for-the-badge&logoColor=lightblue&color=lightblue&label=get%20yomitan%20for%20chrome%20(stable)>)](https://chrome.google.com/webstore/detail/yomitan/likgccmbimhjbgkjambclfkhldnlhbnn)
-[![Get Yomitan for Firefox](<https://img.shields.io/amo/v/yomitan?logo=Firefox&style=for-the-badge&color=orange&label=get%20yomitan%20for%20firefox%20(stable)>)](https://addons.mozilla.org/en-US/firefox/addon/yomitan/)
-[![Get Yomitan for Edge](https://img.shields.io/badge/dynamic/json?logo=puzzle&label=get%20yomitan%20for%20edge&style=for-the-badge&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fidelnfbbmikgfiejhgmddlbkfgiifnnn)](https://microsoftedge.microsoft.com/addons/detail/yomitan/idelnfbbmikgfiejhgmddlbkfgiifnnn)
+<!-- (nuorodos kol kas veda į Yomitan, Wanchan nuorodos bus atnaujintos vėliau).
+[![Get Wanchan for Chrome](<https://img.shields.io/chrome-web-store/v/likgccmbimhjbgkjambclfkhldnlhbnn?logo=Google%20Chrome&style=for-the-badge&logoColor=lightblue&color=lightblue&label=get%20wanchan%20for%20chrome%20(stable)>)](https://chrome.google.com/webstore/detail/yomitan/likgccmbimhjbgkjambclfkhldnlhbnn)
+[![Get Wanchan for Firefox](<https://img.shields.io/amo/v/yomitan?logo=Firefox&style=for-the-badge&color=orange&label=get%20wanchan%20for%20firefox%20(stable)>)](https://addons.mozilla.org/en-US/firefox/addon/yomitan/)
+[![Get Wanchan for Edge](https://img.shields.io/badge/dynamic/json?logo=puzzle&label=get%20wanchan%20for%20edge&style=for-the-badge&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fidelnfbbmikgfiejhgmddlbkfgiifnnn)](https://microsoftedge.microsoft.com/addons/detail/yomitan/idelnfbbmikgfiejhgmddlbkfgiifnnn)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/yomidevs/yomitan/badge?style=for-the-badge)](https://securityscorecards.dev/viewer/?uri=github.com/yomidevs/yomitan)
 
-[![Discord](https://dcbadge.limes.pink/api/server/YkQrXW6TXF?style=for-the-badge)](https://discord.gg/YkQrXW6TXF)
+[![Discord](https://dcbadge.limes.pink/api/server/YkQrXW6TXF?style=for-the-badge)](https://discord.gg/YkQrXW6TXF) -->
 
-# Visit [yomitan.wiki](https://yomitan.wiki) to learn more!
+:wave: **„Wanchan“ yra „Yomitan“ atšaka (fork), kuri savo ruožtu yra (https://foosoft.net/posts/passing-the-torch-to-yomitan/) projektui „Yomichan“** ([migracijos gidas](https://yomitan.wiki/yomichan-migration/)). Savo ruožtu atlikau pakeitimus, pritaikydamas projektą lietuvių kalbai, tuo pačiu išlaikydamas visą pamatinį funkcionalumą, užtikrinantį **kad projektas veiktų naujausiose naršyklių versijose ir prie jo būtų lengva prisidėti**.
 
-:wave: **Yomitan is [the successor](https://foosoft.net/posts/passing-the-torch-to-yomitan/) to Yomichan** ([migration guide](https://yomitan.wiki/yomichan-migration/)) which was [sunset](https://foosoft.net/posts/sunsetting-the-yomichan-project/) by its owner on Feb 26, 2023. We have made a number of foundational changes to ensure **the project stays alive, works on latest browser versions, and is easy to contribute to**.
+📢 **Nauji bendraautoriai [laukiami](#prisidėjimas-contributing)!**
 
-📢 **New contributors [welcome](#contributing)!**
+## Kas yra Wanchan (Yomitan)?
 
-📢 **Interested in adding a new language to Yomitan? See [here](./docs/development/language-features.md) for thorough documentation!**
+„Wanchan“ (Yomitan) paverčia jūsų interneto naršyklę įrankiu, padedančiu ugdyti kalbos raštingumą, leidžiant **skaityti** tekstus, kuriuos kitaip būtų per sunku įveikti
 
-## What is Yomitan?
+Šis plėtinys siūlo galingas funkcijas, kurių nerasite kituose naršyklės žodynuose:
 
-Yomitan turns your web browser into a tool for building language literacy by helping you **read** texts that would otherwise be too difficult to tackle in [a variety of supported languages](https://yomitan.wiki/supported-languages/).
+- 💬 Interaktyvus iššokantis langas su apibrėžimais paieškos rezultatams rodyti.
+- 🔊 Integruotas gimtosios kalbos tarimo garsas su galimybe pridėti savo [asmeninius garso šaltinius](https://yomitan.wiki/advanced/#default-audio-sources).
+- ✍️ Kanji brūkšnių rašymo eiliškumo diagramos pasiekiamos vienu paspaudimu.
+- 📝 [Automatinis kortelių kūrimas](https://yomitan.wiki/anki/) programai [Anki](https://apps.ankiweb.net/) per [AnkiConnect](https://foosoft.net/projects/anki-connect) įskiepį.
+- 🔍 Individualizuotas paieškos puslapis patogiam pasirinktinių paieškos užklausų vykdymui.
+- 📖 Kelių žodynų formatų, įskaitant [EPWING](https://ja.wikipedia.org/wiki/EPWING), palaikymas per [Yomitan Import](https://github.com/yomidevs/yomitan-import) įrankį.
+- ✨ Švarus, modernus kodas palengvina kūrėjams [prisidėti](#prisidėjimas-contributing) kuriant naujas funkcijas ir kalbas.
+  Pastaba: Kai kurios originalios „Yomitan“ funkcijos (pvz., [Mecab; Wanchan API]) 1.0.0.0 versijoje yra paslėptos. Taip pat kai kurios funkcijos buvo supaprastintos ir pritaikytos intuityvesniam naudojimuisi (pvz. Tabs; Popup; ).
 
-Yomitan provides powerful features not available in other browser-based dictionaries:
+## Dokumentacija / Kaip naudotis
 
-- 💬 Interactive popup definition window for displaying search results.
-- 🔊 Built-in native pronunciation audio with the ability to add your own [custom audio sources](https://yomitan.wiki/advanced/#default-audio-sources).
-- ✍️ Kanji stroke order diagrams are just a click away.
-- 📝 [Automatic flashcard creation](https://yomitan.wiki/anki/) for the [Anki](https://apps.ankiweb.net/) flashcard program via the [AnkiConnect](https://foosoft.net/projects/anki-connect) plugin.
-- 🔍 Custom search page for easily executing custom search queries.
-- 📖 Support for multiple dictionary formats including [EPWING](https://ja.wikipedia.org/wiki/EPWING) via the [Yomitan Import](https://github.com/yomidevs/yomitan-import) tool.
-- ✨ Clean, modern code makes it easy for developers to [contribute](#contributing) new features and languages.
+### Kūrėjų dokumentacija
 
-[![Term definitions](img/ss-terms-thumb.png)](img/ss-terms.png)
-[![Kanji information](img/ss-kanji-thumb.png)](img/ss-kanji.png)
-[![Dictionary options](img/ss-dictionaries-thumb.png)](img/ss-dictionaries.png)
-[![Anki options](img/ss-anki-thumb.png)](img/ss-anki.png)
+- Anki integracija
+  - 🔧 [Anki handlebar šablonai](./docs/templates.md)
+- Pažangios funkcijos
+- Problemų sprendimas (Troubleshooting)
+  - 🕷️ [Žinomos naršyklių klaidos (bugs)](./docs/browser-bugs.md)
 
-## Documentation/How To
+<!-- ## Diegimas
 
-**Please visit the [Yomitan Wiki](https://yomitan.wiki) for the most up-to-date usage documentation.**
-
-### Developer Documentation
-
-- Dictionaries
-  - 🛠️ [Making Yomitan Dictionaries](./docs/making-yomitan-dictionaries.md)
-- Anki Integration
-  - 🔧 [Anki handlebar templates](./docs/templates.md)
-- Advanced Features
-- Troubleshooting
-  - 🕷️ [Known browser bugs](./docs/browser-bugs.md)
-
-## Installation
-
-Yomitan comes in two flavors: _stable_ and _testing_. New changes are initially introduced into the _testing_ version, and after some time spent ensuring that they are relatively bug free, they will be promoted to the _stable_ version. If you are technically savvy and don't mind [submitting issues](https://github.com/yomidevs/yomitan/issues/new/choose) on GitHub, try the _testing_ version; otherwise, the _stable_ version will be your best bet. Check [contributing](#contributing) for more information on how to help.
+Išleistos dvi versijos: _stabili (stable)_ ir _testinė (testing)_. Jei išmanote technologijas, siūlome išbandyti _testinę_ versiją, kitu atveju geriausia rinktis _stabilią_ (nuorodos kol kas veda į Yomitan, Wanchan nuorodos bus atnaujintos vėliau).
 
 - **Google Chrome**
-
-  - [stable](https://chrome.google.com/webstore/detail/yomitan/likgccmbimhjbgkjambclfkhldnlhbnn)
-  - [testing](https://chrome.google.com/webstore/detail/yomitan-development-build/glnaenfapkkecknnmginabpmgkenenml)
+  - [stabili](https://chrome.google.com/webstore/detail/yomitan/likgccmbimhjbgkjambclfkhldnlhbnn)
+  - [testinė](https://chrome.google.com/webstore/detail/yomitan-development-build/glnaenfapkkecknnmginabpmgkenenml)
 
 - **Mozilla Firefox**
-
-  - [stable](https://addons.mozilla.org/en-US/firefox/addon/yomitan/)
-  - [testing](https://github.com/yomidevs/yomitan/releases) ※
+  - [stabili](https://addons.mozilla.org/en-US/firefox/addon/yomitan/)
+  - [testinė](https://github.com/yomidevs/yomitan/releases) ※
 
 - **Microsoft Edge**
-  - [stable](https://microsoftedge.microsoft.com/addons/detail/yomitan/idelnfbbmikgfiejhgmddlbkfgiifnnn)
-  - Testing: Coming soon
+  - [stabili](https://microsoftedge.microsoft.com/addons/detail/yomitan/idelnfbbmikgfiejhgmddlbkfgiifnnn)
 
-※ Unlike Chrome, Firefox does not allow extensions meant for testing to be hosted in the marketplace. You will have to download the desired version and side-load it yourself. You only need to do this once, and you will get updates automatically.
+※ Skirtingai nei Chrome, Firefox neleidžia parduotuvėje talpinti testavimui skirtų plėtinių. Turėsite atsisiųsti norimą versiją ir ją įdiegti patys (side-load). Tai reikia padaryti tik kartą, o atnaujinimus gausite automatiškai. -->
 
-## Contributing
+## Prisidėjimas (Contributing)
 
-🚀 **Dip your toes into contributing by looking at issues with the label [good first issue](https://github.com/yomidevs/yomitan/issues?q=is%3Aissue+is%3Aopen+label%3A%22gоοd+fіrst+іssսe%22).**
+Kadangi tai yra atviro kodo projektas, **labai laukiame naujų bendraautorių**! Kviečiu naršyti [problemų sekimo sistemą (issue tracker)](https://github.com/viliuskacerginas/wanchan/issues) ir perskaityti [prisidėjimo gaires](./CONTRIBUTING.md).
 
-Since this is a distributed effort, we **highly welcome new contributors**! Feel free to browse the [issue tracker](https://github.com/yomidevs/yomitan/issues), and read our [contributing guidelines](./CONTRIBUTING.md).
+Būdai, kaip galite padėti:
 
-Here are some ways anyone can help:
+- Išbandykite dev (kūrėjų) versiją ir praneškite apie klaidas.
+- Dokumentuokite UI/UX problemas GitHub Issues platformoje.
+- Padėkite atkurti senas klaidas `area/bug` kategorijoje.
 
-- Try using the Yomitan dev build. Not only do you get cutting edge features, but you can help uncover bugs and give feedback to developers early on.
-- Document any UI/UX friction in GitHub Issues. We're looking to make Yomitan more accessible to non-technical users.
-- All the issues in `area/bug` older than 2 months need help reproducing. If anything interests you, please try to reproduce it and report your results. We can't easily tell if these issues are one-off, have since been resolved, or are no longer relevant.
+Jei norite rašyti kodą, prieš teikdami „Pull Request“, praneškite, ties kuo planuojate dirbti, sukurdami „GitHub Issue“. Tai leis pateikti grįžtamąjį ryšį iš anksto.
 
-> The current active maintainers of Yomitan spend a lot of their time debugging and triaging issues. When someone files a bug report, we need to assess the frequency and severity of the bug. It is extremely helpful if we get multiple reports of people who experience a bug or people who can contribute additional detail to an existing bug report.
+Laukiame:
 
-If you're looking to code, please let us know what you plan on working on before submitting a Pull Request. This gives the core maintainers an opportunity to provide feedback early on before you dive too deep. You can do this by opening a GitHub Issue with the proposal.
+- Gerai parašytų testų ([playwright tests](https://github.com/viliuskacerginas/wanchan/tree/master/test/playwright), [benchmark tests](https://github.com/viliuskacerginas/wanchan/tree/master/benches), unit tests).
+- Geresnio tipų (types) padengimo.
+- Daugiau ir geresnės dokumentacijos!
 
-Some contributions we always appreciate:
+## Kaip sukompiliuoti (Building) projektą
 
-- Well-written tests covering different functionalities. This includes [playwright tests](https://github.com/yomidevs/yomitan/tree/master/test/playwright), [benchmark tests](https://github.com/yomidevs/yomitan/tree/master/benches), and unit tests.
-- Increasing our type coverage.
-- More and better documentation!
+1. Įdiekite [Node.js](https://nodejs.org/) ir [npm](https://www.npmjs.com/).
+2. Paleiskite `npm ci`, kad paruoštumėte aplinką.
+3. Paleiskite `npm run license-report:html`, kad sugeneruotumėte trūkstamą informaciją apie licencijas.
+4. Paleiskite `npm run build` testinei versijai, arba `npm run-script build -- --all --version {version}` leidimo (release) versijai.
+5. Kiekvienos naršyklės kompiliuotus failus rasite `builds` direktorijoje.
 
-Information on how to setup and build the codebase can be found [here](./CONTRIBUTING.md#setup).
+Daugiau informacijos [Prisidėjimas (Contributing)](./CONTRIBUTING.md#setup).
 
-If you want to add or improve support for a language, read the documentation on [language features](./docs/development/language-features.md).
+## Trečiųjų šalių bibliotekos (Third-Party Libraries)
 
-Feel free to join us on the [Yomitan Discord](https://discord.gg/YkQrXW6TXF).
-
-## Building Yomitan
-
-1. Install [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/).
-
-2. Run `npm ci` to set up the environment.
-
-3. Run `npm run license-report:html` to generate any missing or changed license information.
-
-4. Run `npm run build` for a plain testing build or `npm run-script build -- --all --version {version}` for a release build (replacing `{version}` with a version number).
-
-5. The builds for each browser and release branch can be found in the `builds` directory.
-
-For more information, see [Contributing](./CONTRIBUTING.md#setup).
-
-## Third-Party Libraries
-
-Yomitan uses several third-party libraries to function.
+Projektas naudoja kelias trečiųjų šalių bibliotekas:
 
 <!-- The following table is generated using the command `npm run license-report:markdown`. -->
 
@@ -128,6 +100,8 @@ Yomitan uses several third-party libraries to function.
 | yomitan-handlebars  | MIT          | n/a                                                                    |
 | linkedom            | ISC          | git+https://github.com/WebReflection/linkedom.git                      |
 
-## Attribution
+## Padėka / Autorystė (Attribution)
 
-`fallback-bloop.mp3` is provided by [UNIVERSFIELD](https://pixabay.com/sound-effects/error-8-206492/) and licensed under the [Pixabay Content License](https://pixabay.com/service/license-summary/).
+`fallback-bloop.mp3` pateikė [UNIVERSFIELD](https://pixabay.com/sound-effects/error-8-206492/) ir licencijuota pagal [Pixabay Content License](https://pixabay.com/service/license-summary/).
+
+„Wanchan“ yra „Yomitan“ projekto atšaka (fork). Nuoširdžiai dėkojame originaliems „Yomitan“ ir „Yomichan“ kūrėjams už šį nuostabų atviro kodo įrankį.

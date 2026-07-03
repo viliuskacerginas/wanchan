@@ -28,5 +28,5 @@ setup('use test manifest', () => {
     const manifestUtil = new ManifestUtil();
     const variant = manifestUtil.getManifest('chrome-playwright');
     fs.renameSync(manifestPath, copyManifestPath);
-    fs.writeFileSync(manifestPath, ManifestUtil.createManifestString(variant).replace('$YOMITAN_VERSION', '0.0.0.0'));
+    fs.writeFileSync(manifestPath, ManifestUtil.createManifestString(variant).replace('$WANCHAN_VERSION', '0.0.0.0'));
 });

@@ -1,5 +1,5 @@
-# Security Policy
+# Saugumo politika
 
-## Reporting a Vulnerability
+## Pranešimas apie pažeidžiamumą
 
-Please report vulnerabilties using GitHub's built-in functionality: https://github.com/yomidevs/yomitan/security/advisories/new
+Prašome pranešti apie saugumo pažeidžiamumus naudojantis integruota „GitHub“ funkcija: https://github.com/viliuskacerginas/wanchan/security/advisories/new

@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2024-2025  Yomitan Authors
+ * Copyright (C) 2026       Vilius Kačerginas
+ * Copyright (C) 2023-2025  Yomitan Authors
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,12 +18,12 @@
 
 import {suffixInflection} from '../language-transforms.js';
 
-const shimauEnglishDescription = '1. Shows a sense of regret/surprise when you did have volition in doing something, but it turned out to be bad to do.\n' +
-'2. Shows perfective/punctual achievement. This shows that an action has been completed.\n' +
-'3. Shows unintentional action–“accidentally”.\n';
+const shimauEnglishDescription = '1. Rodo apgailestavimą/nustebimą, kai ketinote kažką daryti, bet tai pasirodė esą blogai.\n' +
+'2. Rodo atliktą/punktualų pasiekimą. Tai rodo, kad veiksmas buvo baigtas.\n' +
+'3. Rodo netyčinį veiksmą – „netyčia“.\n';
 
-const passiveEnglishDescription = '1. Indicates an action received from an action performer.\n' +
-'2. Expresses respect for the subject of action performer.\n';
+const passiveEnglishDescription = '1. Nurodo veiksmą, gautą iš veiksmo atlikėjo.\n' +
+'2. Išreiškia pagarbą veiksmo atlikėjo subjektui.\n';
 
 const ikuVerbs = ['いく', '行く', '逝く', '往く'];
 const godanUSpecialVerbs = ['こう', 'とう', '請う', '乞う', '恋う', '問う', '訪う', '宣う', '曰う', '給う', '賜う', '揺蕩う'];
@@ -55,7 +56,7 @@ function irregularVerbSuffixInflections(suffix, conditionsIn, conditionsOut) {
 
 const conditions = {
     'v': {
-        name: 'Verb',
+        name: 'Veiksmažodis',
         i18n: [
             {
                 language: 'ja',
@@ -66,7 +67,7 @@ const conditions = {
         subConditions: ['v1', 'v5', 'vk', 'vs', 'vz'],
     },
     'v1': {
-        name: 'Ichidan verb',
+        name: 'Ichidan veiksmažodis',
         i18n: [
             {
                 language: 'ja',
@@ -77,7 +78,7 @@ const conditions = {
         subConditions: ['v1d', 'v1p'],
     },
     'v1d': {
-        name: 'Ichidan verb, dictionary form',
+        name: 'Ichidan veiksmažodis, žodyno forma',
         i18n: [
             {
                 language: 'ja',
@@ -87,7 +88,7 @@ const conditions = {
         isDictionaryForm: false,
     },
     'v1p': {
-        name: 'Ichidan verb, progressive or perfect form',
+        name: 'Ichidan veiksmažodis, eigos arba atliktinė forma',
         i18n: [
             {
                 language: 'ja',
@@ -97,7 +98,7 @@ const conditions = {
         isDictionaryForm: false,
     },
     'v5': {
-        name: 'Godan verb',
+        name: 'Godan veiksmažodis',
         i18n: [
             {
                 language: 'ja',
@@ -108,7 +109,7 @@ const conditions = {
         subConditions: ['v5d', 'v5s'],
     },
     'v5d': {
-        name: 'Godan verb, dictionary form',
+        name: 'Godan veiksmažodis, žodyno forma',
         i18n: [
             {
                 language: 'ja',
@@ -118,7 +119,7 @@ const conditions = {
         isDictionaryForm: false,
     },
     'v5s': {
-        name: 'Godan verb, short causative form',
+        name: 'Godan veiksmažodis, trumpa priežastinė forma',
         i18n: [
             {
                 language: 'ja',
@@ -129,7 +130,7 @@ const conditions = {
         subConditions: ['v5ss', 'v5sp'],
     },
     'v5ss': {
-        name: 'Godan verb, short causative form having さす ending (cannot conjugate with passive form)',
+        name: 'Godan veiksmažodis, trumpa priežastinė forma su さす galūne (negali būti asmenuojama su pasyvia forma)',
         i18n: [
             {
                 language: 'ja',
@@ -139,7 +140,7 @@ const conditions = {
         isDictionaryForm: false,
     },
     'v5sp': {
-        name: 'Godan verb, short causative form not having さす ending (can conjugate with passive form)',
+        name: 'Godan veiksmažodis, trumpa priežastinė forma be さす galūnės (gali būti asmenuojama su pasyvia forma)',
         i18n: [
             {
                 language: 'ja',
@@ -149,7 +150,7 @@ const conditions = {
         isDictionaryForm: false,
     },
     'vk': {
-        name: 'Kuru verb',
+        name: 'Kuru veiksmažodis',
         i18n: [
             {
                 language: 'ja',
@@ -159,7 +160,7 @@ const conditions = {
         isDictionaryForm: true,
     },
     'vs': {
-        name: 'Suru verb',
+        name: 'Suru veiksmažodis',
         i18n: [
             {
                 language: 'ja',
@@ -169,7 +170,7 @@ const conditions = {
         isDictionaryForm: true,
     },
     'vz': {
-        name: 'Zuru verb',
+        name: 'Zuru veiksmažodis',
         i18n: [
             {
                 language: 'ja',
@@ -179,7 +180,7 @@ const conditions = {
         isDictionaryForm: true,
     },
     'adj-i': {
-        name: 'Adjective with i ending',
+        name: 'Būdvardis su i galūne',
         i18n: [
             {
                 language: 'ja',
@@ -189,39 +190,39 @@ const conditions = {
         isDictionaryForm: true,
     },
     '-ます': {
-        name: 'Polite -ます ending',
+        name: 'Mandagi -ます galūnė',
         isDictionaryForm: false,
     },
     '-ません': {
-        name: 'Polite negative -ません ending',
+        name: 'Mandagi neigiama -ません galūnė',
         isDictionaryForm: false,
     },
     '-て': {
-        name: 'Intermediate -て endings for progressive or perfect tense',
+        name: 'Tarpinės -て galūnės eigos arba atliktiniam laikui',
         isDictionaryForm: false,
     },
     '-ば': {
-        name: 'Intermediate -ば endings for conditional contraction',
+        name: 'Tarpinės -ば galūnės sąlyginiam sutrumpinimui',
         isDictionaryForm: false,
     },
     '-く': {
-        name: 'Intermediate -く endings for adverbs',
+        name: 'Tarpinės -く galūnės prieveiksmiams',
         isDictionaryForm: false,
     },
     '-た': {
-        name: '-た form ending',
+        name: '-た formos galūnė',
         isDictionaryForm: false,
     },
     '-ん': {
-        name: '-ん negative ending',
+        name: '-ん neigiama galūnė',
         isDictionaryForm: false,
     },
     '-なさい': {
-        name: 'Intermediate -なさい ending (polite imperative)',
+        name: 'Tarpinė -なさい galūnė (mandagi liepiamoji nuosaka)',
         isDictionaryForm: false,
     },
     '-ゃ': {
-        name: 'Intermediate -や ending (conditional contraction)',
+        name: 'Tarpinė -や galūnė (sąlyginis sutrumpinimas)',
         isDictionaryForm: false,
     },
 };
@@ -233,9 +234,9 @@ export const japaneseTransforms = {
     transforms: {
         '-ば': {
             name: '-ば',
-            description: '1. Conditional form; shows that the previous stated condition\'s establishment is the condition for the latter stated condition to occur.\n' +
-            '2. Shows a trigger for a latter stated perception or judgment.\n' +
-            'Usage: Attach ば to the hypothetical form (仮定形) of verbs and i-adjectives.',
+            description: '1. Sąlyginė forma; rodo, kad anksčiau nurodytos sąlygos nustatymas yra sąlyga vėliau nurodytai sąlygai įvykti.\n' +
+            '2. Rodo vėliau nurodyto suvokimo ar sprendimo priežastį.\n' +
+            'Naudojimas: Pridėti ば prie veiksmažodžių ir i-būdvardžių tariamosios formos (仮定形).',
             i18n: [
                 {
                     language: 'ja',
@@ -258,7 +259,7 @@ export const japaneseTransforms = {
         },
         '-ゃ': {
             name: '-ゃ',
-            description: 'Contraction of -ば.',
+            description: 'Sutrumpinimas iš -ば.',
             i18n: [
                 {
                     language: 'ja',
@@ -282,12 +283,12 @@ export const japaneseTransforms = {
         },
         '-ちゃ': {
             name: '-ちゃ',
-            description: 'Contraction of ～ては.\n' +
-            '1. Explains how something always happens under the condition that it marks.\n' +
-            '2. Expresses the repetition (of a series of) actions.\n' +
-            '3. Indicates a hypothetical situation in which the speaker gives a (negative) evaluation about the other party\'s intentions.\n' +
-            '4. Used in "Must Not" patterns like ～てはいけない.\n' +
-            'Usage: Attach は after the て-form of verbs, contract ては into ちゃ.',
+            description: 'Sutrumpinimas iš ～ては.\n' +
+            '1. Paaiškina, kaip kažkas visada nutinka esant nurodytai sąlygai.\n' +
+            '2. Išreiškia (serijos) veiksmų pasikartojimą.\n' +
+            '3. Nurodo hipotetinę situaciją, kurioje kalbėtojas pateikia (neigiamą) vertinimą apie kitos pusės ketinimus.\n' +
+            '4. Naudojama „Privaloma ne“ modeliuose, pavyzdžiui, ～てはいけない.\n' +
+            'Naudojimas: Pridėti は po veiksmažodžių て-formos, sutrumpinti ては į ちゃ.',
             i18n: [
                 {
                     language: 'ja',
@@ -317,8 +318,8 @@ export const japaneseTransforms = {
         },
         '-ちゃう': {
             name: '-ちゃう',
-            description: 'Contraction of -しまう.\n' + shimauEnglishDescription +
-            'Usage: Attach しまう after the て-form of verbs, contract てしまう into ちゃう.',
+            description: 'Sutrumpinimas iš -しまう.\n' + shimauEnglishDescription +
+            'Naudojimas: Pridėti しまう po veiksmažodžių て-formos, sutrumpinti てしまう į ちゃう.',
             i18n: [
                 {
                     language: 'ja',
@@ -348,8 +349,8 @@ export const japaneseTransforms = {
         },
         '-ちまう': {
             name: '-ちまう',
-            description: 'Contraction of -しまう.\n' + shimauEnglishDescription +
-            'Usage: Attach しまう after the て-form of verbs, contract てしまう into ちまう.',
+            description: 'Sutrumpinimas iš -しまう.\n' + shimauEnglishDescription +
+            'Naudojimas: Pridėti しまう po veiksmažodžių て-formos, sutrumpinti てしまう į ちまう.',
             i18n: [
                 {
                     language: 'ja',
@@ -380,7 +381,7 @@ export const japaneseTransforms = {
         '-しまう': {
             name: '-しまう',
             description: shimauEnglishDescription +
-            'Usage: Attach しまう after the て-form of verbs.',
+            'Naudojimas: Pridėti しまう po veiksmažodžių て-formos.',
             i18n: [
                 {
                     language: 'ja',
@@ -395,8 +396,8 @@ export const japaneseTransforms = {
         },
         '-なさい': {
             name: '-なさい',
-            description: 'Polite imperative suffix.\n' +
-            'Usage: Attach なさい after the continuative form (連用形) of verbs.',
+            description: 'Mandagi liepiamoji galūnė.\n' +
+            'Naudojimas: Pridėti なさい po veiksmažodžių tęstinės formos (連用形).',
             i18n: [
                 {
                     language: 'ja',
@@ -425,8 +426,8 @@ export const japaneseTransforms = {
         },
         '-そう': {
             name: '-そう',
-            description: 'Appearing that; looking like.\n' +
-            'Usage: Attach そう to the continuative form (連用形) of verbs, or to the stem of adjectives.',
+            description: 'Atrodo, kad; panašu į.\n' +
+            'Naudojimas: Pridėti そう prie veiksmažodžių tęstinės formos (連用形) arba prie būdvardžių kamieno.',
             i18n: [
                 {
                     language: 'ja',
@@ -456,8 +457,8 @@ export const japaneseTransforms = {
         },
         '-すぎる': {
             name: '-すぎる',
-            description: 'Shows something "is too..." or someone is doing something "too much".\n' +
-            'Usage: Attach すぎる to the continuative form (連用形) of verbs, or to the stem of adjectives.',
+            description: 'Rodo, kad kažkas „yra per daug...“ arba kažkas kažką daro „per daug“.\n' +
+            'Naudojimas: Pridėti すぎる prie veiksmažodžių tęstinės formos (連用形) arba prie būdvardžių kamieno.',
             i18n: [
                 {
                     language: 'ja',
@@ -487,8 +488,8 @@ export const japaneseTransforms = {
         },
         '-過ぎる': {
             name: '-過ぎる',
-            description: 'Shows something "is too..." or someone is doing something "too much".\n' +
-            'Usage: Attach 過ぎる to the continuative form (連用形) of verbs, or to the stem of adjectives.',
+            description: 'Rodo, kad kažkas „yra per daug...“ arba kažkas kažką daro „per daug“.\n' +
+            'Naudojimas: Pridėti 過ぎる prie veiksmažodžių tęstinės formos (連用形) arba prie būdvardžių kamieno.',
             i18n: [
                 {
                     language: 'ja',
@@ -518,9 +519,9 @@ export const japaneseTransforms = {
         },
         '-たい': {
             name: '-たい',
-            description: '1. Expresses the feeling of desire or hope.\n' +
-            '2. Used in ...たいと思います, an indirect way of saying what the speaker intends to do.\n' +
-            'Usage: Attach たい to the continuative form (連用形) of verbs. たい itself conjugates as i-adjective.',
+            description: '1. Išreiškia noro ar vilties jausmą.\n' +
+            '2. Naudojama ...たいと思います, netiesioginis būdas pasakyti, ką kalbėtojas ketina daryti.\n' +
+            'Naudojimas: Pridėti たい prie veiksmažodžių tęstinės formos (連用形). たい pats asmenuojamas kaip i-būdvardis.',
             i18n: [
                 {
                     language: 'ja',
@@ -549,9 +550,9 @@ export const japaneseTransforms = {
         },
         '-たら': {
             name: '-たら',
-            description: '1. Denotes the latter stated event is a continuation of the previous stated event.\n' +
-            '2. Assumes that a matter has been completed or concluded.\n' +
-            'Usage: Attach たら to the continuative form (連用形) of verbs after euphonic change form, かったら to the stem of i-adjectives.',
+            description: '1. Nurodo, kad vėliau nurodytas įvykis yra anksčiau nurodyto įvykio tęsinys.\n' +
+            '2. Daro prielaidą, kad reikalas buvo baigtas arba daryta išvada.\n' +
+            'Naudojimas: Pridėti たら prie veiksmažodžių tęstinės formos (連用形) po garsų kaitos formos, かったら prie i-būdvardžių kamieno.',
             i18n: [
                 {
                     language: 'ja',
@@ -583,9 +584,9 @@ export const japaneseTransforms = {
         },
         '-たり': {
             name: '-たり',
-            description: '1. Shows two actions occurring back and forth (when used with two verbs).\n' +
-            '2. Shows examples of actions and states (when used with multiple verbs and adjectives).\n' +
-            'Usage: Attach たり to the continuative form (連用形) of verbs after euphonic change form, かったり to the stem of i-adjectives',
+            description: '1. Rodo du veiksmus, vykstančius pirmyn ir atgal (kai naudojama su dviem veiksmažodžiais).\n' +
+            '2. Rodo veiksmų ir būsenų pavyzdžius (kai naudojama su keliais veiksmažodžiais ir būdvardžiais).\n' +
+            'Naudojimas: Pridėti たり prie veiksmažodžių tęstinės formos (連用形) po garsų kaitos formos, かったり prie i-būdvardžių kamieno',
             i18n: [
                 {
                     language: 'ja',
@@ -616,9 +617,9 @@ export const japaneseTransforms = {
         },
         '-て': {
             name: '-て',
-            description: 'て-form.\n' +
-            'It has a myriad of meanings. Primarily, it is a conjunctive particle that connects two clauses together.\n' +
-            'Usage: Attach て to the continuative form (連用形) of verbs after euphonic change form, くて to the stem of i-adjectives.',
+            description: 'て-forma.\n' +
+            'Turi daugybę reikšmių. Pirmiausia tai yra jungiamoji dalelytė, jungianti du sakinius.\n' +
+            'Naudojimas: Pridėti て prie veiksmažodžių tęstinės formos (連用形) po garsų kaitos formos, くて prie i-būdvardžių kamieno.',
             i18n: [
                 {
                     language: 'ja',
@@ -649,9 +650,9 @@ export const japaneseTransforms = {
         },
         '-ず': {
             name: '-ず',
-            description: '1. Negative form of verbs.\n' +
-            '2. Continuative form (連用形) of the particle ぬ (nu).\n' +
-            'Usage: Attach ず to the irrealis form (未然形) of verbs.',
+            description: '1. Neigiama veiksmažodžių forma.\n' +
+            '2. Tęstinė forma (連用形) dalelytės ぬ (nu).\n' +
+            'Naudojimas: Pridėti ず prie veiksmažodžių "irrealis" formos (未然形) .',
             i18n: [
                 {
                     language: 'ja',
@@ -680,9 +681,9 @@ export const japaneseTransforms = {
         },
         '-ぬ': {
             name: '-ぬ',
-            description: 'Negative form of verbs.\n' +
-            'Usage: Attach ぬ to the irrealis form (未然形) of verbs.\n' +
-            'する becomes せぬ',
+            description: 'Neigiama veiksmažodžių forma.\n' +
+            'Naudojimas: Pridėti ぬ prie veiksmažodžių "irrealis" formos (未然形).\n' +
+            'する tampa せぬ',
             i18n: [
                 {
                     language: 'ja',
@@ -711,9 +712,9 @@ export const japaneseTransforms = {
         },
         '-ん': {
             name: '-ん',
-            description: 'Negative form of verbs; a sound change of ぬ.\n' +
-            'Usage: Attach ん to the irrealis form (未然形) of verbs.\n' +
-            'する becomes せん',
+            description: 'Neigiama veiksmažodžių forma; garso pasikeitimas iš ぬ.\n' +
+            'Naudojimas: Pridėti ん prie veiksmažodžių "irrealis" formos (未然形).\n' +
+            'する tampa せん',
             i18n: [
                 {
                     language: 'ja',
@@ -742,9 +743,9 @@ export const japaneseTransforms = {
         },
         '-んばかり': {
             name: '-んばかり',
-            description: 'Shows an action or condition is on the verge of occurring, or an excessive/extreme degree.\n' +
-            'Usage: Attach んばかり to the irrealis form (未然形) of verbs.\n' +
-            'する becomes せんばかり',
+            description: 'Rodo, kad veiksmas ar sąlyga yra ant įvykio slenksčio, arba per didelį/ekstremalų laipsnį.\n' +
+            'Naudojimas: Pridėti んばかり prie veiksmažodžių "irrealis" formos (未然形).\n' +
+            'する tampa せんばかり',
             i18n: [
                 {
                     language: 'ja',
@@ -773,10 +774,10 @@ export const japaneseTransforms = {
         },
         '-んとする': {
             name: '-んとする',
-            description: '1. Shows the speaker\'s will or intention.\n' +
-            '2. Shows an action or condition is on the verge of occurring.\n' +
-            'Usage: Attach んとする to the irrealis form (未然形) of verbs.\n' +
-            'する becomes せんとする',
+            description: '1. Rodo kalbėtojo valią ar ketinimą.\n' +
+            '2. Rodo, kad veiksmas ar sąlyga yra ant įvykio slenksčio.\n' +
+            'Naudojimas: Pridėti んとする prie veiksmažodžių "irrealis" formos (未然形).\n' +
+            'する tampa せんとする',
             i18n: [
                 {
                     language: 'ja',
@@ -805,11 +806,11 @@ export const japaneseTransforms = {
         },
         '-む': {
             name: '-む',
-            description: 'Archaic.\n' +
-            '1. Shows an inference of a certain matter.\n' +
-            '2. Shows speaker\'s intention.\n' +
-            'Usage: Attach む to the irrealis form (未然形) of verbs.\n' +
-            'する becomes せむ',
+            description: 'Archaizmas.\n' +
+            '1. Rodo tam tikro dalyko išvadą.\n' +
+            '2. Rodo kalbėtojo ketinimą.\n' +
+            'Naudojimas: Pridėti む prie veiksmažodžių "irrealis" formos (未然形).\n' +
+            'する tampa せむ',
             i18n: [
                 {
                     language: 'ja',
@@ -838,9 +839,9 @@ export const japaneseTransforms = {
         },
         '-ざる': {
             name: '-ざる',
-            description: 'Negative form of verbs.\n' +
-            'Usage: Attach ざる to the irrealis form (未然形) of verbs.\n' +
-            'する becomes せざる',
+            description: 'Neigiama veiksmažodžių forma.\n' +
+            'Naudojimas: Pridėti ざる prie veiksmažodžių "irrealis" formos (未然形).\n' +
+            'する tampa せざる',
             i18n: [
                 {
                     language: 'ja',
@@ -869,10 +870,10 @@ export const japaneseTransforms = {
         },
         '-ねば': {
             name: '-ねば',
-            description: '1. Shows a hypothetical negation; if not ...\n' +
-            '2. Shows a must. Used with or without ならぬ.\n' +
-            'Usage: Attach ねば to the irrealis form (未然形) of verbs.\n' +
-            'する becomes せねば',
+            description: '1. Rodo hipotezę apie neigimą; jei ne...\n' +
+            '2. Rodo būtinybę. Naudojama su arba be ならぬ.\n' +
+            'Naudojimas: Pridėti ねば prie veiksmažodžių "irrealis" formos (未然形).\n' +
+            'する tampa せねば',
             i18n: [
                 {
                     language: 'ja',
@@ -901,7 +902,7 @@ export const japaneseTransforms = {
         },
         '-く': {
             name: '-く',
-            description: 'Adverbial form of i-adjectives.\n',
+            description: 'Prieveiksminė i-būdvardžių forma.\n',
             i18n: [
                 {
                     language: 'ja',
@@ -914,11 +915,11 @@ export const japaneseTransforms = {
             ],
         },
         'causative': {
-            name: 'causative',
-            description: 'Describes the intention to make someone do something.\n' +
-            'Usage: Attach させる to the irrealis form (未然形) of ichidan verbs and くる.\n' +
-            'Attach せる to the irrealis form (未然形) of godan verbs and する.\n' +
-            'It itself conjugates as an ichidan verb.',
+            name: 'Priežastinė forma',
+            description: 'Apibūdina ketinimą priversti ką nors kažką daryti.\n' +
+            'Naudojimas: Pridėti させる prie ichidan veiksmažodžių ir くる "irrealis" formos (未然形).\n' +
+            'Pridėti せる prie godan veiksmažodžių ir する "irrealis" formos (未然形).\n' +
+            'Pats asmenuojamas kaip ichidan veiksmažodis.',
             i18n: [
                 {
                     language: 'ja',
@@ -949,13 +950,13 @@ export const japaneseTransforms = {
             ],
         },
         'short causative': {
-            name: 'short causative',
-            description: 'Contraction of the causative form.\n' +
-            'Describes the intention to make someone do something.\n' +
-            'Usage: Attach す to the irrealis form (未然形) of godan verbs.\n' +
-            'Attach さす to the dictionary form (終止形) of ichidan verbs.\n' +
-            'する becomes さす, くる becomes こさす.\n' +
-            'It itself conjugates as an godan verb.',
+            name: 'Trumpa priežastinė forma',
+            description: 'Priežastinės formos sutrumpinimas.\n' +
+            'Apibūdina ketinimą priversti ką nors kažką daryti.\n' +
+            'Naudojimas: Pridėti す prie godan veiksmažodžių "irrealis" formos (未然形).\n' +
+            'Pridėti さす prie ichidan veiksmažodžių žodyno formos (終止形).\n' +
+            'する tampa さす, くる tampa こさす.\n' +
+            'Pats asmenuojamas kaip godan veiksmažodis.',
             i18n: [
                 {
                     language: 'ja',
@@ -984,10 +985,10 @@ export const japaneseTransforms = {
             ],
         },
         'imperative': {
-            name: 'imperative',
-            description: '1. To give orders.\n' +
-            '2. (As あれ) Represents the fact that it will never change no matter the circumstances.\n' +
-            '3. Express a feeling of hope.',
+            name: 'Liepiamoji nuosaka',
+            description: '1. Duoti įsakymus.\n' +
+            '2. (Kaip あれ) Rodo faktą, kad tai niekada nepasikeis, nepaisant aplinkybių.\n' +
+            '3. Išreiškia vilties jausmą.',
             i18n: [
                 {
                     language: 'ja',
@@ -1019,9 +1020,9 @@ export const japaneseTransforms = {
             ],
         },
         'continuative': {
-            name: 'continuative',
-            description: 'Used to indicate actions that are (being) carried out.\n' +
-            'Refers to 連用形, the part of the verb after conjugating with -ます and dropping ます.',
+            name: 'Tęstinė forma',
+            description: 'Naudojama nurodyti veiksmus, kurie yra (yra) atliekami.\n' +
+            'Reiškia 連用形, veiksmažodžio dalį po asmenavimo su -ます ir numetus ます.',
             i18n: [
                 {
                     language: 'ja',
@@ -1068,10 +1069,10 @@ export const japaneseTransforms = {
             ],
         },
         'negative': {
-            name: 'negative',
-            description: '1. Negative form of verbs.\n' +
-            '2. Expresses a feeling of solicitation to the other party.\n' +
-            'Usage: Attach ない to the irrealis form (未然形) of verbs, くない to the stem of i-adjectives. ない itself conjugates as i-adjective. ます becomes ません.',
+            name: 'Neigiama forma',
+            description: '1. Neigiama veiksmažodžių forma.\n' +
+            '2. Išreiškia raginimo jausmą kitai pusei.\n' +
+            'Naudojimas: Pridėti ない prie veiksmažodžių "irrealis" formos (未然形), くない prie i-būdvardžių kamieno. Pats ない asmenuojamas kaip i-būdvardis. ます tampa ません.',
             i18n: [
                 {
                     language: 'ja',
@@ -1102,8 +1103,8 @@ export const japaneseTransforms = {
         },
         '-さ': {
             name: '-さ',
-            description: 'Nominalizing suffix of i-adjectives indicating nature, state, mind or degree.\n' +
-            'Usage: Attach さ to the stem of i-adjectives.',
+            description: 'I-būdvardžių sudaiktavardinimo galūnė, nurodanti prigimtį, būseną, protą ar laipsnį.\n' +
+            'Naudojimas: Pridėti さ prie i-būdvardžių kamieno.',
             i18n: [
                 {
                     language: 'ja',
@@ -1116,9 +1117,9 @@ export const japaneseTransforms = {
             ],
         },
         'passive': {
-            name: 'passive',
+            name: 'Pasyvioji forma',
             description: passiveEnglishDescription +
-            'Usage: Attach れる to the irrealis form (未然形) of godan verbs.',
+            'Naudojimas: Pridėti れる prie godan veiksmažodžių "irrealis" formos (未然形).',
             i18n: [
                 {
                     language: 'ja',
@@ -1146,13 +1147,13 @@ export const japaneseTransforms = {
         },
         '-た': {
             name: '-た',
-            description: '1. Indicates a reality that has happened in the past.\n' +
-            '2. Indicates the completion of an action.\n' +
-            '3. Indicates the confirmation of a matter.\n' +
-            '4. Indicates the speaker\'s confidence that the action will definitely be fulfilled.\n' +
-            '5. Indicates the events that occur before the main clause are represented as relative past.\n' +
-            '6. Indicates a mild imperative/command.\n' +
-            'Usage: Attach た to the continuative form (連用形) of verbs after euphonic change form, かった to the stem of i-adjectives.',
+            description: '1. Nurodo realybę, kuri įvyko praeityje.\n' +
+            '2. Nurodo veiksmo užbaigimą.\n' +
+            '3. Nurodo dalyko patvirtinimą.\n' +
+            '4. Nurodo kalbėtojo įsitikinimą, kad veiksmas tikrai bus įvykdytas.\n' +
+            '5. Nurodo įvykius, kurie įvyksta prieš pagrindinį sakinį, kaip santykinę praeitį.\n' +
+            '6. Nurodo švelnų liepimą/komandą.\n' +
+            'Naudojimas: Pridėti た prie veiksmažodžių tęstinės formos (連用形) po garsų kaitos formos, かった prie i-būdvardžių kamieno.',
             i18n: [
                 {
                     language: 'ja',
@@ -1185,8 +1186,8 @@ export const japaneseTransforms = {
         },
         '-ます': {
             name: '-ます',
-            description: 'Polite conjugation of verbs and adjectives.\n' +
-            'Usage: Attach ます to the continuative form (連用形) of verbs.',
+            description: 'Mandagus veiksmažodžių ir būdvardžių asmenavimas.\n' +
+            'Naudojimas: Pridėti ます prie veiksmažodžių tęstinės formos (連用形).',
             i18n: [
                 {
                     language: 'ja',
@@ -1214,11 +1215,11 @@ export const japaneseTransforms = {
             ],
         },
         'potential': {
-            name: 'potential',
-            description: 'Indicates a state of being (naturally) capable of doing an action.\n' +
-            'Usage: Attach (ら)れる to the irrealis form (未然形) of ichidan verbs.\n' +
-            'Attach る to the imperative form (命令形) of godan verbs.\n' +
-            'する becomes できる, くる becomes こ(ら)れる',
+            name: 'Galimoji forma',
+            description: 'Nurodo būseną, kai esama (natūraliai) pajėgiam atlikti veiksmą.\n' +
+            'Naudojimas: Pridėti (ら)れる prie ichidan veiksmažodžių "irrealis" formos (未然形).\n' +
+            'Pridėti る prie godan veiksmažodžių liepiamosios formos (命令形).\n' +
+            'する tampa できる, くる tampa こ(ら)れる',
             i18n: [
                 {
                     language: 'ja',
@@ -1243,11 +1244,11 @@ export const japaneseTransforms = {
             ],
         },
         'potential or passive': {
-            name: 'potential or passive',
+            name: 'Galimoji arba pasyvioji forma',
             description: passiveEnglishDescription +
-            '3. Indicates a state of being (naturally) capable of doing an action.\n' +
-            'Usage: Attach られる to the irrealis form (未然形) of ichidan verbs.\n' +
-            'する becomes せられる, くる becomes こられる',
+            '3. Nurodo būseną, kai esama (natūraliai) pajėgiam atlikti veiksmą.\n' +
+            'Naudojimas: Pridėti られる prie ichidan veiksmažodžių "irrealis" formos (未然形).\n' +
+            'する tampa せられる, くる tampa こられる',
             i18n: [
                 {
                     language: 'ja',
@@ -1266,14 +1267,14 @@ export const japaneseTransforms = {
             ],
         },
         'volitional': {
-            name: 'volitional',
-            description: '1. Expresses speaker\'s will or intention.\n' +
-            '2. Expresses an invitation to the other party.\n' +
-            '3. (Used in …ようとする) Indicates being on the verge of initiating an action or transforming a state.\n' +
-            '4. Indicates an inference of a matter.\n' +
-            'Usage: Attach よう to the irrealis form (未然形) of ichidan verbs.\n' +
-            'Attach う to the irrealis form (未然形) of godan verbs after -o euphonic change form.\n' +
-            'Attach かろう to the stem of i-adjectives (4th meaning only).',
+            name: 'Norimosios nuosakos forma',
+            description: '1. Išreiškia kalbėtojo valią ar ketinimą.\n' +
+            '2. Išreiškia kvietimą kitai pusei.\n' +
+            '3. (Naudojama …ようとする) Nurodo buvimą ant veiksmo pradžios ar būsenos pasikeitimo slenksčio.\n' +
+            '4. Nurodo dalyko išvadą.\n' +
+            'Naudojimas: Pridėti よう prie ichidan veiksmažodžių "irrealis" formos (未然形).\n' +
+            'Pridėti う prie godan veiksmažodžių "irrealis" formos (未然形) po -o garsų kaitos formos.\n' +
+            'Pridėti かろう prie i-būdvardžių kamieno (tik 4-oji reikšmė).',
             i18n: [
                 {
                     language: 'ja',
@@ -1303,12 +1304,12 @@ export const japaneseTransforms = {
             ],
         },
         'volitional slang': {
-            name: 'volitional slang',
-            description: 'Contraction of volitional form + か\n' +
-            '1. Expresses speaker\'s will or intention.\n' +
-            '2. Expresses an invitation to the other party.\n' +
-            'Usage: Replace final う with っ of volitional form then add か.\n' +
-            'For example: 行こうか -> 行こっか.',
+            name: 'Norimosios nuosakos slengas',
+            description: 'Norimosios formos + か sutrumpinimas\n' +
+            '1. Išreiškia kalbėtojo valią ar ketinimą.\n' +
+            '2. Išreiškia kvietimą kitai pusei.\n' +
+            'Naudojimas: Pakeisti galutinį norimosios formos う į っ tada pridėti か.\n' +
+            'Pavyzdžiui: 行こうか -> 行こっか.',
             i18n: [
                 {
                     language: 'ja',
@@ -1338,12 +1339,12 @@ export const japaneseTransforms = {
         },
         '-まい': {
             name: '-まい',
-            description: 'Negative volitional form of verbs.\n' +
-            '1. Expresses speaker\'s assumption that something is likely not true.\n' +
-            '2. Expresses speaker\'s will or intention not to do something.\n' +
-            'Usage: Attach まい to the dictionary form (終止形) of verbs.\n' +
-            'Attach まい to the irrealis form (未然形) of ichidan verbs.\n' +
-            'する becomes しまい, くる becomes こまい',
+            description: 'Neigiama norimoji veiksmažodžių forma.\n' +
+            '1. Išreiškia kalbėtojo prielaidą, kad kažkas greičiausiai nėra tiesa.\n' +
+            '2. Išreiškia kalbėtojo valią ar ketinimą kažko nedaryti.\n' +
+            'Naudojimas: Pridėti まい prie veiksmažodžių žodyno formos (終止形).\n' +
+            'Pridėti まい prie ichidan veiksmažodžių "irrealis" formos (未然形).\n' +
+            'する tampa しまい, くる tampa こまい',
             i18n: [
                 {
                     language: 'ja',
@@ -1366,10 +1367,10 @@ export const japaneseTransforms = {
         },
         '-おく': {
             name: '-おく',
-            description: 'To do certain things in advance in preparation (or in anticipation) of latter needs.\n' +
-            'Usage: Attach おく to the て-form of verbs.\n' +
-            'Attach でおく after ない negative form of verbs.\n' +
-            'Contracts to とく・どく in speech.',
+            description: 'Daryti tam tikrus dalykus iš anksto ruošiantis (arba numatant) vėlesnius poreikius.\n' +
+            'Naudojimas: Pridėti おく prie veiksmažodžių て-formos.\n' +
+            'Pridėti でおく po veiksmažodžių neigiamos formos ない.\n' +
+            'Kalboje sutrumpinama iki とく・どく.',
             i18n: [
                 {
                     language: 'ja',
@@ -1387,12 +1388,12 @@ export const japaneseTransforms = {
         },
         '-いる': {
             name: '-いる',
-            description: '1. Indicates an action continues or progresses to a point in time.\n' +
-            '2. Indicates an action is completed and remains as is.\n' +
-            '3. Indicates a state or condition that can be taken to be the result of undergoing some change.\n' +
-            'Usage: Attach いる to the て-form of verbs. い can be dropped in speech.\n' +
-            'Attach でいる after ない negative form of verbs.\n' +
-            '(Slang) Attach おる to the て-form of verbs. Contracts to とる・でる in speech.',
+            description: '1. Nurodo, kad veiksmas tęsiasi arba progresuoja iki tam tikro laiko momento.\n' +
+            '2. Nurodo, kad veiksmas yra baigtas ir lieka toks, koks yra.\n' +
+            '3. Nurodo būseną ar sąlygą, kuri gali būti laikoma tam tikro pokyčio rezultatu.\n' +
+            'Naudojimas: Pridėti いる prie veiksmažodžių て-formos. Kalboje い gali būti praleista.\n' +
+            'Pridėti でいる po veiksmažodžių neigiamos formos ない.\n' +
+            '(Slengas) Pridėti おる prie veiksmažodžių て-formos. Kalboje sutrumpinama iki とる・でる.',
             i18n: [
                 {
                     language: 'ja',
@@ -1412,7 +1413,7 @@ export const japaneseTransforms = {
         },
         '-き': {
             name: '-き',
-            description: 'Attributive form (連体形) of i-adjectives. An archaic form that remains in modern Japanese.',
+            description: 'I-būdvardžių pažyminio forma (連体形). Archainė forma, išlikusi šiuolaikinėje japonų kalboje.',
             i18n: [
                 {
                     language: 'ja',
@@ -1426,8 +1427,8 @@ export const japaneseTransforms = {
         },
         '-げ': {
             name: '-げ',
-            description: 'Describes a person\'s appearance. Shows feelings of the person.\n' +
-            'Usage: Attach げ or 気 to the stem of i-adjectives',
+            description: 'Apibūdina žmogaus išvaizdą. Rodo žmogaus jausmus.\n' +
+            'Naudojimas: Pridėti げ arba 気 prie i-būdvardžių kamieno',
             i18n: [
                 {
                     language: 'ja',
@@ -1442,9 +1443,9 @@ export const japaneseTransforms = {
         },
         '-がる': {
             name: '-がる',
-            description: '1. Shows subject’s feelings contrast with what is thought/known about them.\n' +
-            '2. Indicates subject\'s behavior (stands out).\n' +
-            'Usage: Attach がる to the stem of i-adjectives. It itself conjugates as a godan verb.',
+            description: '1. Rodo, kad subjekto jausmai kontrastuoja su tuo, kas apie juos manoma/žinoma.\n' +
+            '2. Nurodo subjekto elgesį (išsiskiria).\n' +
+            'Naudojimas: Pridėti がる prie i-būdvardžių kamieno. Pats asmenuojamas kaip godan veiksmažodis.',
             i18n: [
                 {
                     language: 'ja',
@@ -1458,7 +1459,7 @@ export const japaneseTransforms = {
         },
         '-え': {
             name: '-え',
-            description: 'Slang. A sound change of i-adjectives.\n' +
+            description: 'Slengas. I-būdvardžių garso pasikeitimas.\n' +
             'ai：やばい → やべぇ\n' +
             'ui：さむい → さみぃ/さめぇ\n' +
             'oi：すごい → すげぇ',
@@ -1521,7 +1522,7 @@ export const japaneseTransforms = {
                     name: '～んな',
                 },
             ],
-            description: 'Slang sound change of r-column syllables to n (when before an n-sound, usually の or な)',
+            description: 'Slenginis r-stulpelio skiemenų garso pasikeitimas į n (kai prieš n-garsą, dažniausiai の arba な)',
             rules: [
                 suffixInflection('んなさい', 'りなさい', [], ['-なさい']),
                 suffixInflection('らんない', 'られない', ['adj-i'], ['adj-i']),
@@ -1531,7 +1532,7 @@ export const japaneseTransforms = {
             ],
         },
         'imperative negative slang': {
-            name: 'imperative negative slang',
+            name: 'Liepiamasis neigiamas slengas',
             i18n: [
                 {
                     language: 'ja',
@@ -1544,7 +1545,7 @@ export const japaneseTransforms = {
         },
         'kansai-ben negative': {
             name: 'kansai-ben',
-            description: 'Negative form of kansai-ben verbs',
+            description: 'Neigiama kansai-ben veiksmažodžių forma',
             i18n: [
                 {
                     language: 'ja',
@@ -1563,7 +1564,7 @@ export const japaneseTransforms = {
         },
         'kansai-ben -て': {
             name: 'kansai-ben',
-            description: '-て form of kansai-ben verbs',
+            description: 'Kansai-ben veiksmažodžių -て forma',
             i18n: [
                 {
                     language: 'ja',
@@ -1591,7 +1592,7 @@ export const japaneseTransforms = {
         },
         'kansai-ben -た': {
             name: 'kansai-ben',
-            description: '-た form of kansai-ben terms',
+            description: 'Kansai-ben terminų -た forma',
             i18n: [
                 {
                     language: 'ja',
@@ -1619,7 +1620,7 @@ export const japaneseTransforms = {
         },
         'kansai-ben -たら': {
             name: 'kansai-ben',
-            description: '-たら form of kansai-ben terms',
+            description: 'Kansai-ben terminų -たら forma',
             i18n: [
                 {
                     language: 'ja',
@@ -1647,7 +1648,7 @@ export const japaneseTransforms = {
         },
         'kansai-ben -たり': {
             name: 'kansai-ben',
-            description: '-たり form of kansai-ben terms',
+            description: 'Kansai-ben terminų -たり forma',
             i18n: [
                 {
                     language: 'ja',
@@ -1675,7 +1676,7 @@ export const japaneseTransforms = {
         },
         'kansai-ben -く': {
             name: 'kansai-ben',
-            description: '-く stem of kansai-ben adjectives',
+            description: 'Kansai-ben būdvardžių -く kamienas',
             i18n: [
                 {
                     language: 'ja',
@@ -1699,7 +1700,7 @@ export const japaneseTransforms = {
         },
         'kansai-ben adjective -て': {
             name: 'kansai-ben',
-            description: '-て form of kansai-ben adjectives',
+            description: 'Kansai-ben būdvardžių -て forma',
             i18n: [
                 {
                     language: 'ja',
@@ -1723,7 +1724,7 @@ export const japaneseTransforms = {
         },
         'kansai-ben adjective negative': {
             name: 'kansai-ben',
-            description: 'Negative form of kansai-ben adjectives',
+            description: 'Neigiama kansai-ben būdvardžių forma',
             i18n: [
                 {
                     language: 'ja',

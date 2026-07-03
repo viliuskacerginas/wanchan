@@ -1,0 +1,89 @@
+/*
+ * Copyright (C) 2026       Vilius Kačerginas
+ * Copyright (C) 2023-2025  Yomitan Authors
+ * Copyright (C) 2020-2022  Yomichan Authors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+ 
+/* Generated Overrides for search.css */
+
+/* Variables */
+:root {
+    --search-scroll-container-horizontal-padding: 0.72em;
+    --query-horizontal-padding: 0;
+
+    --padding: calc(10em / var(--font-size-no-units));
+    --content-width-search: 700;
+    --content-width: calc(1em * var(--content-width-search) / var(--font-size-no-units));
+
+    --background-color: var(--wanchan-bg-light);
+    --separator-color1: #e5e7eb;
+
+    --search-textbox-height: 48px; /* Taller */
+    --search-textbox-min-height: 48px;
+    --search-textbox-max-height: calc(var(--textarea-line-height) * 5 + var(--textarea-padding) * 2);
+
+    --cog-icon-size: 26px;
+}
+
+
+:root[data-theme=dark] {
+    --separator-color1: #374151;
+    --background-color: var(--wanchan-bg-dark);
+}
+
+
+
+.search-textbox-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--wanchan-border-light);
+    border-radius: 12px; /* Wanchan Round */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: var(--input-background-color);
+    overflow: hidden;
+}
+
+
+/* Dark mode search box border */
+:root[data-theme=dark] .search-textbox-container {
+    border-color: var(--wanchan-border-dark);
+}
+
+
+#search-textbox {
+    color: var(--text-color);
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    padding: var(--textarea-padding);
+    background-color: transparent; /* Container handles bg */
+    border-radius: 0;
+    line-height: var(--textarea-line-height);
+    border: 0;
+    outline: none;
+    width: 100%;
+    height: var(--search-textbox-height);
+    min-height: var(--search-textbox-min-height);
+    max-height: var(--search-textbox-max-height);
+    resize: none;
+    font-size: var(--font-size);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    white-space: pre-wrap;
+    z-index: 1;
+}
+

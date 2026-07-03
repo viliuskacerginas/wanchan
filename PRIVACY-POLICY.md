@@ -1,49 +1,49 @@
-# Privacy Policy for Yomitan
+# Privatumo politika – Wanchan
 
-Yomitan data is stored locally on your device. Yomitan does not sell or externally collect any user data.
+Wanchan duomenys saugomi lokaliai jūsų įrenginyje. Wanchan neparduoda ir išoriškai nerenka jokių vartotojo duomenų.
 
-Some features require sending data to third party services. These features and what data is sent are detailed below.
+Kai kurioms funkcijoms reikia siųsti duomenis trečiųjų šalių paslaugoms. Šios funkcijos ir siunčiami duomenys yra aprašyti žemiau.
 
-## Audio Sources (enabled by default)
+## Garso šaltiniai (Audio Sources) (įjungta pagal nutylėjimą)
 
-Required to play pronunciation audio for terms.
+Reikalinga norint atkurti terminų tarimo garsą.
 
-Audio playback may send the **term, reading, and/or language** for any dictionary entry term where the `Play Audio` speaker button is pressed. Personally identifying information is never sent.
+Garso atkūrimas gali siųsti **terminą, tarimą (skaitymą) ir (arba) kalbą** kiekvienam žodyno įrašui, kur paspaudžiamas `Play Audio` garsiakalbio mygtukas. Asmeniškai identifikuojanti informacija niekada nesiunčiama.
 
-The following audio sources are provided by default (availability may vary based on the selected language):
+Pagal nutylėjimą pateikiami šie garso šaltiniai (prieinamumas gali skirtis priklausomai nuo pasirinktos kalbos):
 
-- JPod101: Audio sourced specifically from the Japanese variant of LanguagePod101 https://www.japanesepod101.com/.
+- JPod101: Garsas gaunamas specialiai iš japoniškos LanguagePod101 versijos https://www.japanesepod101.com/.
 
-- LanguagePod101: Audio sourced from any language available on https://languagepod101.com/.
+- LanguagePod101: Garsas gaunamas iš bet kurios kalbos, esančios https://languagepod101.com/.
 
-- Jisho: Audio sourced from https://jisho.org.
+- Jisho: Garsas gaunamas iš https://jisho.org.
 
-- Lingua Libre: Audio from https://lingualibre.org content sourced through the [Wikimedia Commons API](https://commons.wikimedia.org/w/api.php).
+- Lingua Libre: Garsas iš https://lingualibre.org turinio, gaunamas per [Wikimedia Commons API](https://commons.wikimedia.org/w/api.php).
 
-- Wiktionary: Audio from https://www.wiktionary.org/ content sourced through the [Wikimedia Commons API](https://commons.wikimedia.org/w/api.php).
+- Wiktionary: Garsas iš https://www.wiktionary.org/ turinio, gaunamas per [Wikimedia Commons API](https://commons.wikimedia.org/w/api.php).
 
-Custom audio sources may be configured manually by users to access any URL. A dictionary entry's **term, reading, and/or language** may be configured to be sent to the chosen source.
+Vartotojai gali rankiniu būdu sukonfigūruoti pritaikytus garso šaltinius, kad pasiektų bet kokį URL. Žodyno įrašo **terminas, tarimas (skaitymas) ir (arba) kalba** gali būti sukonfigūruoti siuntimui į pasirinktą šaltinį.
 
-## Anki (disabled by default)
+## Anki (išjungta pagal nutylėjimą)
 
-[Anki](https://apps.ankiweb.net/) connectivity is provided through [AnkiConnect](https://ankiweb.net/shared/info/2055492159).
+[Anki](https://apps.ankiweb.net/) ryšys užtikrinamas per [AnkiConnect](https://ankiweb.net/shared/info/2055492159).
 
-Anki actions may be triggered when a user performs a Yomitan search or interacts with an Anki feature within Yomitan.
+Anki veiksmai gali būti suaktyvinti, kai vartotojas atlieka Wanchan paiešką arba sąveikauja su Anki funkcija Wanchan viduje.
 
-Yomitan may send **limited information about the current webpage, information contained in Yomitan dictionary entries, and/or relevant user settings**.
+Wanchan gali siųsti **ribotą informaciją apie dabartinį tinklalapį, informaciją, esančią Wanchan žodynų įrašuose, ir (arba) atitinkamus vartotojo nustatymus**.
 
-**Enabling Anki connectivity does not enable sending any webpage information unless explicitly configured to do so.** Only the minimum amount of data is sent and only what is specifically configured by the user.
+**Anki ryšio įjungimas neįjungia jokios tinklalapio informacijos siuntimo, nebent tai būtų aiškiai sukonfigūruota.** Siunčiamas tik minimalus duomenų kiekis ir tik tai, ką specialiai sukonfigūravo vartotojas.
 
-Webpage information that may be sent is limited to: the term being scanned, the sentence containing the scanned term, the webpage URL, the webpage title, and/or a screenshot of the page.
+Tinklalapio informacija, kuri gali būti siunčiama, apsiriboja: nuskaitomu terminu, sakiniu, kuriame yra nuskaitomas terminas, tinklalapio URL, tinklalapio pavadinimu ir (arba) puslapio ekrano kopija.
 
-## Yomitan API (disabled by default)
+## Wanchan API (išjungta pagal nutylėjimą)
 
-Yomitan provides an option to expose data to other applications through an API.
+Wanchan suteikia galimybę atskleisti duomenis kitoms programoms per API.
 
-Local applications may request data from Yomitan through the Yomitan API for external use. The Yomitan API is not accessible by other devices.
+Vietinės (Local) programos gali užklausti duomenis iš Wanchan per Wanchan API išoriniam naudojimui. Wanchan API nepasiekiama kitiems įrenginiams.
 
-## Mecab (disabled by default)
+## Mecab (išjungta pagal nutylėjimą)
 
-[Mecab](https://taku910.github.io/mecab/) connectivity is available for text parsing. Yomitan may send **search query text** to Mecab for parsing. Personally identifying information is never sent.
+[Mecab](https://taku910.github.io/mecab/) ryšys pasiekiamas teksto analizavimui (parsing). Wanchan gali siųsti **paieškos užklausos tekstą** į Mecab analizei. Asmeniškai identifikuojanti informacija niekada nesiunčiama.
 
-Mecab does not distribute any data; all data stays on your device.
+Mecab neplatina jokių duomenų; visi duomenys lieka jūsų įrenginyje.

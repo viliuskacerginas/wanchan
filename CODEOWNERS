@@ -1,1 +1,4 @@
-* @yomidevs/yomitan-codeowners
+# Šis failas nurodo, kas yra atsakingas už kodą šiame repozitoriume.
+
+# Visi failai priklauso pagrindiniam projekto savininkui:
+*       @viliuskacerginas

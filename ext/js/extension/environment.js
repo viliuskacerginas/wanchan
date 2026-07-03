@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2026       Vilius Kačerginas
  * Copyright (C) 2023-2025  Yomitan Authors
  * Copyright (C) 2020-2022  Yomichan Authors
  *
@@ -97,14 +98,13 @@ export class Environment {
         } catch (e) {
             // NOP
         }
-        if (typeof browser !== 'undefined') {
-            if (this._isSafari()) {
-                return 'safari';
-            }
+        if (typeof browser !== 'undefined' && navigator.userAgent.includes('Firefox')) {
             if (os === 'android') {
                 return 'firefox-mobile';
             }
             return 'firefox';
+        } else if (typeof browser !== 'undefined' && this._isSafari()) {
+            return 'safari';
         } else {
             return 'chrome';
         }

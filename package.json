@@ -1,7 +1,8 @@
 {
-    "name": "yomitan",
-    "version": "0.0.0",
-    "description": "Japanese pop-up dictionary extension for Chrome and Firefox.",
+    "name": "wanchan",
+    "version": "1.0.0.0",
+    "description": "Iššokantis žodynas (naršyklės plėtinys), skirtas lengvesniam japonų kalbos mokymuisi ir tekstų skaitymui. Sukurtas populiaraus „Yomitan“ variklio pagrindu ir pritaikytas lietuvių kalbai.",
+    "author": "Vilius Kačerginas",
     "directories": {
         "test": "test"
     },
@@ -14,8 +15,8 @@
         "bench": "vitest bench",
         "build": "node ./dev/bin/build.js",
         "build:libs": "node ./dev/bin/build-libs.js",
-        "build:serve:firefox-android": "node ./dev/bin/build.js --target firefox-android && web-ext run -s ./builds/yomitan-firefox-android",
-        "build:serve:kiwi-browser": "node ./dev/bin/build.js --target chrome-dev && adb shell mkdir -p /sdcard/yomitan && adb push ./builds/yomitan-chrome-dev.zip /sdcard/yomitan/yomitan-kiwi-browser.zip",
+        "build:serve:firefox-android": "node ./dev/bin/build.js --target firefox-android && web-ext run -s ./builds/wanchan-firefox-android",
+        "build:serve:kiwi-browser": "node ./dev/bin/build.js --target chrome-dev && adb shell mkdir -p /sdcard/wanchan && adb push ./builds/wanchan-chrome-dev.zip /sdcard/wanchan/wanchan-kiwi-browser.zip",
         "//WARNING": "These are convenience functions for running from CLI but are NOT called from CI because they are not parallel. Make sure you update CI scripts if you update these.",
         "test": "npm run test:js && npm run test:ts && npm run test:css && npm run test:html && npm run test:unit && npm run test:unit:options && npm run test:json && npm run test:md && npm run test:build",
         "test:fast": "npm run test:js && npm run test:ts && npm run test:unit && npm run test:json:format",
@@ -44,7 +45,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/yomidevs/yomitan.git"
+        "url": "https://github.com/viliuskacerginas/wanchan.git"
     },
     "license": "GPL-3.0-or-later",
     "licenses": [
@@ -54,9 +55,9 @@
         }
     ],
     "bugs": {
-        "url": "https://github.com/yomidevs/yomitan/issues"
+        "url": "https://github.com/viliuskacerginas/wanchan/issues"
     },
-    "homepage": "https://github.com/yomidevs/yomitan/",
+    "homepage": "https://github.com/viliuskacerginas/wanchan",
     "webExt": {
         "sourceDir": "ext"
     },

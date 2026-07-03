@@ -1,11 +1,11 @@
 {
     "manifest": {
         "manifest_version": 3,
-        "name": "Yomitan Popup Dictionary",
-        "version": "$YOMITAN_VERSION",
-        "description": "Popup dictionary for language learning",
+        "name": "Wanchan Iššokantis žodynas",
+        "version": "1.0.0.0",
+        "description": "Iššokantis žodynas kalbų mokymuisi",
         "author": {
-            "email": "themoeway@googlegroups.com"
+            "email": "vilius.kacerginas@gmail.com"
         },
         "icons": {
             "16": "images/icon16.png",
@@ -26,7 +26,7 @@
                 "64": "images/icon64.png",
                 "128": "images/icon128.png"
             },
-            "default_title": "Yomitan",
+            "default_title": "Wanchan",
             "default_popup": "action-popup.html"
         },
         "background": {
@@ -34,7 +34,7 @@
             "type": "module"
         },
         "omnibox": {
-            "keyword": "yomi"
+            "keyword": "wan"
         },
         "content_scripts": [
             {
@@ -127,7 +127,7 @@
         {
             "name": "chrome",
             "inherit": "base",
-            "fileName": "yomitan-chrome.zip",
+            "fileName": "wanchan-chrome.zip",
             "excludeFiles": [
                 "background.html"
             ]
@@ -135,7 +135,7 @@
         {
             "name": "chrome-dev",
             "inherit": "chrome",
-            "fileName": "yomitan-chrome-dev.zip",
+            "fileName": "wanchan-chrome-dev.zip",
             "modifications": [
                 {
                     "action": "replace",
@@ -160,7 +160,7 @@
         {
             "name": "chrome-playwright",
             "inherit": "chrome-dev",
-            "fileName": "yomitan-chrome-playwright.zip",
+            "fileName": "wanchan-chrome-playwright.zip",
             "modifications": [
                 {
                     "action": "remove",
@@ -183,14 +183,14 @@
         {
             "name": "firefox",
             "inherit": "base",
-            "fileName": "yomitan-firefox.zip",
+            "fileName": "wanchan-firefox.zip",
             "modifications": [
                 {
                     "action": "set",
                     "path": [
                         "author"
                     ],
-                    "value": "Yomidevs"
+                    "value": "Vilius Kačerginas"
                 },
                 {
                     "action": "delete",
@@ -251,7 +251,7 @@
                     ],
                     "value": {
                         "gecko": {
-                            "id": "{6b733b82-9261-47ee-a595-2dda294a4d08}",
+                            "id": "wanchan@viliuskac.com",
                             "strict_min_version": "115.0"
                         },
                         "gecko_android": {
@@ -277,7 +277,7 @@
         {
             "name": "firefox-dev",
             "inherit": "firefox",
-            "fileName": "yomitan-firefox-dev.zip",
+            "fileName": "wanchan-firefox-dev.zip",
             "modifications": [
                 {
                     "action": "replace",
@@ -304,16 +304,7 @@
                         "gecko",
                         "id"
                     ],
-                    "value": "{2d13e145-294e-4ead-9bce-b4644b203a00}"
-                },
-                {
-                    "action": "set",
-                    "path": [
-                        "browser_specific_settings",
-                        "gecko",
-                        "update_url"
-                    ],
-                    "value": "https://raw.githubusercontent.com/yomidevs/yomitan/metadata/updates.json"
+                    "value": "wanchan-dev@viliuskac.com"
                 }
             ],
             "excludeFiles": [
@@ -326,7 +317,7 @@
         {
             "name": "firefox-android",
             "inherit": "firefox",
-            "fileName": "yomitan-firefox-android"
+            "fileName": "wanchan-firefox-android"
         },
         {
             "name": "safari",
@@ -336,7 +327,7 @@
                     "path": [
                         "author"
                     ],
-                    "value": "Yomidevs"
+                    "value": "Vilius Kačerginas"
                 },
                 {
                     "action": "remove",
@@ -384,7 +375,7 @@
         {
             "name": "edge",
             "inherit": "base",
-            "fileName": "yomitan-edge.zip",
+            "fileName": "wanchan-edge.zip",
             "excludeFiles": [
                 "background.html"
             ]

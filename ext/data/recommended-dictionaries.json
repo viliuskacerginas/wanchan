@@ -344,19 +344,19 @@
         "frequency": [
             {
                 "name": "BCCWJ",
-                "description": "Based on the Balanced Corpus of Contemporary Written Japanese covering books, magazines, newspapers, blogs, forums, textbooks, and legal documents among others.",
+                "description": "Sukurta remiantis subalansuotu šiuolaikinės rašytinės japonų kalbos tekstynu (BCCWJ), apimančiu knygas, žurnalus, laikraščius, tinklaraščius, forumus, vadovėlius, teisinius dokumentus ir kitus šaltinius.",
                 "homepage": "https://github.com/Kuuuube/yomitan-dictionaries?tab=readme-ov-file#bccwj-suw-luw-combined",
                 "downloadUrl": "https://github.com/Kuuuube/yomitan-dictionaries/releases/download/yomitan-permalink/BCCWJ_SUW_LUW_combined.zip"
             },
             {
                 "name": "JPDB",
-                "description": "A frequency dictionary based on the corpus from the online Japanese dictionary and SRS system at https://jpdb.io.",
+                "description": "Dažnumo žodynas, sukurtas remiantis internetinio japonų kalbos žodyno ir SRS (pasikartojimo intervalais) sistemos https://jpdb.io tekstynu.",
                 "homepage": "https://github.com/Kuuuube/yomitan-dictionaries?tab=readme-ov-file#jpdb-v22-frequency",
                 "downloadUrl": "https://github.com/Kuuuube/yomitan-dictionaries/releases/download/yomitan-permalink/JPDB_v2.2_Frequency_Kana.zip"
             },
             {
                 "name": "Jiten",
-                "description": "A frequency dictionary based on the corpus from the media stats database at https://jiten.moe",
+                "description": "Dažnumo žodynas, sukurtas remiantis internetinės svetainės jiten.moe medijos statistikos duomenų bazės tekstynu - https://jiten.moe",
                 "homepage": "https://jiten.moe/other",
                 "downloadUrl": "https://api.jiten.moe/api/frequency-list/download?downloadType=yomitan"
             }
@@ -364,25 +364,19 @@
         "grammar": [],
         "kanji": [
             {
-                "name": "KANJIDIC",
-                "description": "An English dictionary with readings, meanings, stroke order diagrams, frequency, grade level, JLPT level and frequency of kanji characters.",
-                "homepage": "https://github.com/yomidevs/jmdict-yomitan?tab=readme-ov-file#kanjidic-for-yomitan",
-                "downloadUrl": "https://github.com/yomidevs/jmdict-yomitan/releases/latest/download/KANJIDIC_english.zip"
+                "name": "KanjiWan",
+                "description": "Nemokamas, atviros licencijos Lietuvių kalbos žodynas su hieroglifų (kandži) skaitymais, reikšmėmis, brūkšnių rašymo sekos diagramomis, naudojimo dažnumu, mokyklinio lygio klasifikacija ir JLPT egzamino lygiais.",
+                "homepage": "https://github.com/viliuskacerginas/wanchan-dict",
+                "downloadUrl": "https://github.com/viliuskacerginas/wanchan-dict/releases/latest/download/KanjiWan.zip"
             }
         ],
         "pronunciation": [],
         "terms": [
             {
-                "name": "Jitendex",
-                "description": "A free and openly licensed Japanese-to-English dictionary with example sentences, usage notes, etymology notes, cross references, antonyms, definition notes.",
-                "homepage": "https://jitendex.org",
-                "downloadUrl": "https://github.com/stephenmk/stephenmk.github.io/releases/latest/download/jitendex-yomitan.zip"
-            },
-            {
-                "name": "JMnedict",
-                "description": "A dictionary of Japanese proper names maintained by the Electronic Dictionary Research and Development Group.",
-                "homepage": "https://github.com/yomidevs/jmdict-yomitan?tab=readme-ov-file#jmnedict-for-yomitan",
-                "downloadUrl": "https://github.com/yomidevs/jmdict-yomitan/releases/latest/download/JMnedict.zip"
+                "name": "WanchanDict",
+                "description": "Nemokamas, atviros licencijos Japonų–Lietuvių kalbos žodynas. Šis žodynas – neįtikėtinai tikslus, išsamus japonų kalbos šaltinis, tad jis tikrai taps jūsų geriausiu draugu. Nuo klasikinių terminų iki modernaus slengo – čia rasite viską.",
+                "homepage": "https://github.com/viliuskacerginas/wanchan-dict",
+                "downloadUrl": "https://github.com/viliuskacerginas/wanchan-dict/releases/latest/download/WanchanDict.zip"
             }
         ]
     },

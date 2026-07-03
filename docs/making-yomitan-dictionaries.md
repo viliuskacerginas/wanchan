@@ -1,6 +1,6 @@
-# Making Yomitan Dictionaries　<!-- omit in toc -->
+# Making Wanchan Dictionaries　<!-- omit in toc -->
 
-This document provides an overview on how to create your own Yomitan dictionary.
+This document provides an overview on how to create your own Wanchan dictionary.
 
 - [Tools](#tools)
 - [Read the Schemas](#read-the-schemas)
@@ -18,22 +18,22 @@ This document provides an overview on how to create your own Yomitan dictionary.
 
 ## Read the Schemas
 
-Familiarity with the [Yomitan schemas](https://github.com/yomidevs/yomitan/tree/master/ext/data/schemas) is essential. These schemas define the structure of Yomitan dictionaries. Helpful resources for interpreting JSON schemas include [codebeautify](https://codebeautify.org/jsonviewer/), [json-schema-viewer](https://json-schema-viewer.vercel.app/), and [jsonhero](https://jsonhero.io/).
+Familiarity with the [Wanchan schemas](https://github.com/viliuskacerginas/wanchan/tree/master/ext/data/schemas) is essential. These schemas define the structure of Wanchan dictionaries. Helpful resources for interpreting JSON schemas include [codebeautify](https://codebeautify.org/jsonviewer/), [json-schema-viewer](https://json-schema-viewer.vercel.app/), and [jsonhero](https://jsonhero.io/).
 
-Below is a list of Yomitan dictionary schemas, their expected filenames, and their usage:
+Below is a list of Wanchan dictionary schemas, their expected filenames, and their usage:
 
-| Schema                                                                                                                                                    | Expected Filename                | Usage                                                                                  |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
-| [`dictionary-index-schema.json`](https://github.com/yomidevs/yomitan/tree/master/ext/data/schemas/dictionary-index-schema.json)                           | `index.json`                     | Metadata about the dictionary. Please include as much detail as possible.              |
-| [`dictionary-kanji-bank-v3-schema.json`](https://github.com/yomidevs/yomitan/tree/master/ext/data/schemas/dictionary-kanji-bank-v3-schema.json)           | `kanji_bank_${number}.json`      | Information used in the kanji viewer - meanings, readings, statistics, and codepoints. |
-| [`dictionary-kanji-meta-bank-v3-schema.json`](https://github.com/yomidevs/yomitan/tree/master/ext/data/schemas/dictionary-kanji-meta-bank-v3-schema.json) | `kanji_meta-bank_${number}.json` | Stores kanji frequency data.                                                           |
-| [`dictionary-tag-bank-v3-schema.json`](https://github.com/yomidevs/yomitan/tree/master/ext/data/schemas/dictionary-tag-bank-v3-schema.json)               | `tag_bank_${number}.json`        | Defines tags for kanji and term dictionaries, like parts of speech or kanken level.    |
-| [`dictionary-term-bank-v3-schema.json`](https://github.com/yomidevs/yomitan/tree/master/ext/data/schemas/dictionary-term-bank-v3-schema.json)             | `term_bank_${number}.json`       | Stores dictionary readings, definitions, etc.                                          |
-| [`dictionary-term-meta-bank-v3-schema.json`](https://github.com/yomidevs/yomitan/tree/master/ext/data/schemas/dictionary-term-meta-bank-v3-schema.json)   | `term_meta_bank_${number}.json`  | Stores meta information about terms, such as frequency data and pitch accent data.     |
+| Schema                                                                                                                                                            | Expected Filename                | Usage                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
+| [`dictionary-index-schema.json`](https://github.com/viliuskacerginas/wanchan/tree/master/ext/data/schemas/dictionary-index-schema.json)                           | `index.json`                     | Metadata about the dictionary. Please include as much detail as possible.              |
+| [`dictionary-kanji-bank-v3-schema.json`](https://github.com/viliuskacerginas/wanchan/tree/master/ext/data/schemas/dictionary-kanji-bank-v3-schema.json)           | `kanji_bank_${number}.json`      | Information used in the kanji viewer - meanings, readings, statistics, and codepoints. |
+| [`dictionary-kanji-meta-bank-v3-schema.json`](https://github.com/viliuskacerginas/wanchan/tree/master/ext/data/schemas/dictionary-kanji-meta-bank-v3-schema.json) | `kanji_meta-bank_${number}.json` | Stores kanji frequency data.                                                           |
+| [`dictionary-tag-bank-v3-schema.json`](https://github.com/viliuskacerginas/wanchan/tree/master/ext/data/schemas/dictionary-tag-bank-v3-schema.json)               | `tag_bank_${number}.json`        | Defines tags for kanji and term dictionaries, like parts of speech or kanken level.    |
+| [`dictionary-term-bank-v3-schema.json`](https://github.com/viliuskacerginas/wanchan/tree/master/ext/data/schemas/dictionary-term-bank-v3-schema.json)             | `term_bank_${number}.json`       | Stores dictionary readings, definitions, etc.                                          |
+| [`dictionary-term-meta-bank-v3-schema.json`](https://github.com/viliuskacerginas/wanchan/tree/master/ext/data/schemas/dictionary-term-meta-bank-v3-schema.json)   | `term_meta_bank_${number}.json`  | Stores meta information about terms, such as frequency data and pitch accent data.     |
 
 ## Adding Custom CSS
 
-You can add custom CSS to a dictionary simply by adding a `styles.css` file to the root of the dictionary zip archive. This file will be loaded by Yomitan and applied to the dictionary viewer with the styles scoped to the dictionary. For example, observe the `styles.css` file in the [official test dictionary](https://github.com/yomidevs/yomitan/tree/master/test/data/dictionaries/valid-dictionary1).
+You can add custom CSS to a dictionary simply by adding a `styles.css` file to the root of the dictionary zip archive. This file will be loaded by Wanchan and applied to the dictionary viewer with the styles scoped to the dictionary. For example, observe the `styles.css` file in the [official test dictionary](https://github.com/viliuskacerginas/wanchan/tree/master/test/data/dictionaries/valid-dictionary1).
 
 ## Packaging A Dictionary
 
@@ -41,7 +41,7 @@ A dictionary can contain various types of information within the zip file. After
 
 ## Examples
 
-- The [official test dictionary](https://github.com/yomidevs/yomitan/tree/master/test/data/dictionaries/valid-dictionary1) showcases the full range of features available in Yomitan dictionaries.
+- The [official test dictionary](https://github.com/viliuskacerginas/wanchan/tree/master/test/data/dictionaries/valid-dictionary1) showcases the full range of features available in Wanchan dictionaries.
 
 ## Schema Validation
 
@@ -53,30 +53,30 @@ For VSCode validation, use the following settings JSON:
   "json.schemas": [
     {
       "fileMatch": ["kanji_bank_*.json"],
-      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-kanji-bank-v3-schema.json"
+      "url": "https://github.com/viliuskacerginas/wanchan/raw/master/ext/data/schemas/dictionary-kanji-bank-v3-schema.json"
     },
     {
       "fileMatch": ["kanji_meta_bank_*.json"],
-      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-kanji-meta-bank-v3-schema.json"
+      "url": "https://github.com/viliuskacerginas/wanchan/raw/master/ext/data/schemas/dictionary-kanji-meta-bank-v3-schema.json"
     },
     {
       "fileMatch": ["tag_bank_*.json"],
-      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-tag-bank-v3-schema.json"
+      "url": "https://github.com/viliuskacerginas/wanchan/raw/master/ext/data/schemas/dictionary-tag-bank-v3-schema.json"
     },
     {
       "fileMatch": ["term_bank_*.json"],
-      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-term-bank-v3-schema.json"
+      "url": "https://github.com/viliuskacerginas/wanchan/raw/master/ext/data/schemas/dictionary-term-bank-v3-schema.json"
     },
     {
       "fileMatch": ["term_meta_bank_*.json"],
-      "url": "https://github.com/yomidevs/yomitan/raw/master/ext/data/schemas/dictionary-term-meta-bank-v3-schema.json"
+      "url": "https://github.com/viliuskacerginas/wanchan/raw/master/ext/data/schemas/dictionary-term-meta-bank-v3-schema.json"
     }
   ],
 ```
 
 ## Conjugation
 
-For Yomitan to conjugate Japanese terms, they need the appropriate part of speech tag. The part of speech labels are documented on the [official JMDict page](http://www.edrdg.org/jmdictdb/cgi-bin/edhelp.py?svc=jmdict&sid=#kw_pos). For other languages, find the part of speech tags in `ext/js/language/{language}/{language}-transforms.js` under the `conditions` label, for labels that aren't prefixed with "Intermediate".
+For Wanchan to conjugate Japanese terms, they need the appropriate part of speech tag. The part of speech labels are documented on the [official JMDict page](http://www.edrdg.org/jmdictdb/cgi-bin/edhelp.py?svc=jmdict&sid=#kw_pos). For other languages, find the part of speech tags in `ext/js/language/{language}/{language}-transforms.js` under the `conditions` label, for labels that aren't prefixed with "Intermediate".
 
 ## Tag Categories
 
@@ -94,8 +94,8 @@ The second item in the array of the tag bank schema determines the tag category,
 - pronunciation-dictionary
 - search
 
-You can view the tag colors [here](https://github.com/yomidevs/yomitan/blob/48f1d012ad5045319d4e492dfbefa39da92817b2/ext/css/display.css#L136-L149).
+You can view the tag colors [here](https://github.com/viliuskacerginas/wanchan/blob/master/ext/css/display.css#L136-L149).
 
 # Community Contributions
 
-If you have any questions, need help, or want to share a new dictionary, feel free to pop in the [Yomitan Discord server](/README.md#yomitan). We're happy to help you get started!
+If you have any questions, need help, or want to share a new dictionary, feel free to open a [GitHub Discussion](https://github.com/viliuskacerginas/wanchan/discussions). We're happy to help you get started!

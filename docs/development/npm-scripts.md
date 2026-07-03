@@ -34,7 +34,7 @@ Scripts can be executed by running `npm run <name>`.
 
   > `adb` is required to be installed on your computer for this command to work!
 
-  Builds for Chromium and then uses `adb` to `push` the built zip file over to `/sdcard/yomitan`. You can then open up Kiwi Browser on the target phone and install the extension through that zip file.
+  Builds for Chromium and then uses `adb` to `push` the built zip file over to `/sdcard/wanchan`. You can then open up Kiwi Browser on the target phone and install the extension through that zip file.
 
 - `test`
   Runs all of the tests.

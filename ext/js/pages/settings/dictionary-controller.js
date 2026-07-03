@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2026       Vilius Kačerginas
  * Copyright (C) 2023-2025  Yomitan Authors
  * Copyright (C) 2020-2022  Yomichan Authors
  *
@@ -813,14 +814,15 @@ export class DictionaryController {
      * @returns {import('settings').DictionaryOptions}
      */
     static createDefaultDictionarySettings(name, enabled, styles) {
+        // wanchan edit: Modified default settings
         return {
             name,
             alias: name,
             enabled,
             allowSecondarySearches: false,
-            definitionsCollapsible: 'not-collapsible',
-            partsOfSpeechFilter: true,
-            useDeinflections: true,
+            definitionsCollapsible: 'collapsed',
+            partsOfSpeechFilter: false,
+            useDeinflections: false,
             styles: styles ?? '',
         };
     }

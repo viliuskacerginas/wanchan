@@ -32,8 +32,8 @@ jobs:
         with:
           timeoutMs: 1200000
           extensionId: ${{ secrets.FF_OFFLINE_EXT_ID }}
-          zipFilePath: yomitan-firefox-dev.zip
-          xpiFilePath: yomitan-firefox-dev.xpi
+          zipFilePath: wanchan-firefox-dev.zip
+          xpiFilePath: wanchan-firefox-dev.xpi
           jwtIssuer: ${{ secrets.FF_JWT_ISSUER }}
           jwtSecret: ${{ secrets.FF_JWT_SECRET }}
 
@@ -46,7 +46,7 @@ jobs:
       - name: Generate hashes
         id: hash
         run: |
-          echo "hashes=$(sha256sum yomitan-firefox-dev.xpi | base64 -w0)" >> "$GITHUB_OUTPUT"
+          echo "hashes=$(sha256sum wanchan-firefox-dev.xpi | base64 -w0)" >> "$GITHUB_OUTPUT"
 
       - name: Upload offline xpi release asset
         id: uploadReleaseAsset
@@ -56,8 +56,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ inputs.upload_url }}
-          asset_path: yomitan-firefox-dev.xpi
-          asset_name: yomitan-firefox-dev.xpi
+          asset_path: wanchan-firefox-dev.xpi
+          asset_name: wanchan-firefox-dev.xpi
           asset_content_type: application/x-xpinstall
 
       # update updates.json so that all people who have the dev version installed get the new update

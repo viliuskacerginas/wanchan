@@ -143,9 +143,9 @@ function getIndexOfFilePath(array, item) {
  * @param {string} manifestPath
  * @param {boolean} dryRun
  * @param {boolean} dryRunBuildZip
- * @param {string} yomitanVersion
+ * @param {string} wanchanVersion
  */
-async function build(buildDir, extDir, manifestUtil, variantNames, manifestPath, dryRun, dryRunBuildZip, yomitanVersion) {
+async function build(buildDir, extDir, manifestUtil, variantNames, manifestPath, dryRun, dryRunBuildZip, wanchanVersion) {
     const sevenZipExes = ['7za', '7z'];
 
     // Create build directory
@@ -168,7 +168,7 @@ async function build(buildDir, extDir, manifestUtil, variantNames, manifestPath,
         process.stdout.write(message);
     };
 
-    process.stdout.write(`Version: ${yomitanVersion}...\n`);
+    process.stdout.write(`Version: ${wanchanVersion}...\n`);
 
     for (const variantName of variantNames) {
         const variant = manifestUtil.getVariant(variantName);
@@ -188,7 +188,7 @@ async function build(buildDir, extDir, manifestUtil, variantNames, manifestPath,
             const fileNameSafe = path.basename(fileName);
             const fullFileName = path.join(buildDir, fileNameSafe);
             if (!dryRun) {
-                fs.writeFileSync(manifestPath, ManifestUtil.createManifestString(modifiedManifest).replace('$YOMITAN_VERSION', yomitanVersion));
+                fs.writeFileSync(manifestPath, ManifestUtil.createManifestString(modifiedManifest).replace('$WANCHAN_VERSION', wanchanVersion));
             }
 
             if (fileName.endsWith('.zip')) {
@@ -260,7 +260,7 @@ export async function main() {
 
     const dryRun = /** @type {boolean} */ (args.dryRun);
     const dryRunBuildZip = /** @type {boolean} */ (args.dryRunBuildZip);
-    const yomitanVersion = /** @type {string} */ (args.version);
+    const wanchanVersion = /** @type {string} */ (args.version);
 
     const manifestUtil = new ManifestUtil();
 
@@ -278,14 +278,14 @@ export async function main() {
             manifestUtil.getVariants().filter(({buildable}) => buildable !== false).map(({name}) => name) :
             targets)
         ));
-        await build(buildDir, extDir, manifestUtil, variantNames, manifestPath, dryRun, dryRunBuildZip, yomitanVersion);
+        await build(buildDir, extDir, manifestUtil, variantNames, manifestPath, dryRun, dryRunBuildZip, wanchanVersion);
     } finally {
         // Restore manifest
         const manifestName = /** @type {?string} */ ((!args.default && typeof args.manifest !== 'undefined') ? args.manifest : null);
         const restoreManifest = manifestUtil.getManifest(manifestName);
         process.stdout.write('Restoring manifest...\n');
         if (!dryRun) {
-            fs.writeFileSync(manifestPath, ManifestUtil.createManifestString(restoreManifest).replace('$YOMITAN_VERSION', yomitanVersion));
+            fs.writeFileSync(manifestPath, ManifestUtil.createManifestString(restoreManifest).replace('$WANCHAN_VERSION', wanchanVersion));
         }
     }
 }

@@ -1,0 +1,448 @@
+/*
+ * Copyright (C) 2026       Vilius Kačerginas
+ * Copyright (C) 2023-2025  Yomitan Authors
+ * Copyright (C) 2020-2022  Yomichan Authors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+ 
+/* Generated Overrides for settings.css */
+
+/* Variables */
+:root {
+    --padding: 10px;
+    --padding-negative: calc(var(--padding) * -1);
+    --content-width: 700px;
+    --main-content-padding: 10px;
+    --sidebar-size: 230px;
+    --preview-sidebar-expanded-width: 400px;
+    --shadow-vertical: 0 1px 4px 0 var(--shadow-color), 0 2px 2px 0 var(--shadow-color);
+    --shadow-vertical-top: 0 -1px 4px 0 var(--shadow-color), 0 -2px 2px 0 var(--shadow-color);
+    --shadow-left: -1px 0 4px 0 var(--shadow-color), -2px 0 2px 0 var(--shadow-color);
+    --shadow-right: 1px 0 4px 0 var(--shadow-color), 2px 0 2px 0 var(--shadow-color);
+    --settings-group-horizontal-margin: 0;
+    --settings-group-inner-vertical-padding: 1.25em; /* Spacious */
+    --settings-group-inner-horizontal-padding: 1.5em;
+    --settings-group-inner-horizontal-padding-half: calc(var(--settings-group-inner-horizontal-padding) * 0.5);
+    --settings-group-inner-horizontal-padding-half-wrappable: var(--settings-group-inner-horizontal-padding-half);
+    --settings-group-inner-horizontal-padding-fourth: calc(var(--settings-group-inner-horizontal-padding) * 0.25);
+    --settings-group-border-radius: 12px; /* Wanchan Roundness */
+    --settings-group-right-max-height: 40px;
+    --show-preview-label-height: 40px;
+
+    --font-size-no-units: 14;
+    --font-size: calc(1px * var(--font-size-no-units));
+    --font-size-small: 12px;
+    --outline-item-height: 48px; /* Taller Sidebar Items */
+    --outline-item-icon-size: 32px;
+    --input-short-width: calc(var(--input-width-large) / 2 - var(--padding) / 2);
+    --input-short-height: 30px;
+    --input-medium-width: calc(var(--input-width-large) * 0.75);
+    --fab-button-size: 56px;
+    --fab-button-padding: 16px;
+    --modal-width: 600px;
+    --modal-height: 400px;
+    --modal-width-small: 400px;
+    --modal-height-small: 200px;
+    --modal-width-medium: 600px;
+    --modal-height-medium: 400px;
+    --modal-transition-offset: -64px;
+    --badge-size: 16px;
+
+    --link-color: var(--wanchan-purple-dark);
+    --link-color-hover: var(--wanchan-purple);
+    --separator-color1: #e5e7eb;
+    --separator-color2: #f3f4f6;
+    --outline-item-background-color: rgba(13, 13, 13, 0);
+    --outline-item-background-color-hover: rgba(13, 13, 13, 0.15);
+    --warning-color: #96751c;
+    --warning-color-light: #edc75e;
+    --dim-background-color: rgba(0, 0, 0, 0.5);
+    --content-dimmer-color: rgba(0, 0, 0, 0.1);
+    --advanced-color: #6640be;
+    --advanced-color-lighter: hsl(258, 50%, 75%);
+    --advanced-color-transparent25: rgba(102, 64, 190, 0.5);
+
+    --modal-padding-horizontal: 1em;
+    --modal-padding-vertical: 0.625em;
+    --modal-padding-vertical-half: calc(var(--modal-padding-vertical) * 0.5);
+    --modal-button-spacing: 0.625em;
+
+    --scrollbar-thumb-color: #c1c1c1;
+    --scrollbar-track-color: #f1f1f1;
+    --scrollbar-inverse-thumb-color: #444444;
+    --scrollbar-inverse-track-color: #2f2f2f;
+
+    --dictionary-import-border-color: #cccccc;
+    --dictionary-import-border-color-hover: #bfd1ff;
+    --dictionary-import-hover-background-color: rgba(28, 116, 233, 0.05);
+
+    --custom-css-dim-size: 73.5%;
+    --custom-css-dim-fade-length: 3.5%;
+    --custom-css-modal-background: linear-gradient(90deg, var(--dim-background-color) calc(100% - var(--custom-css-dim-fade-length)), rgba(0, 0, 0, 0));
+}
+
+/* Dark mode link colors */
+:root[data-theme=dark] {
+    --link-color: var(--wanchan-amber-dark);
+    --link-color-hover: var(--wanchan-amber);
+}
+
+
+/* Light mode outline item styling */
+.outline-item {
+    --button-content-color: var(--text-color);
+    --button-border-color: transparent;
+    --button-background-color: var(--outline-item-background-color);
+    --button-shadow: none;
+
+    --button-hover-border-color: transparent;
+    --button-hover-background-color: var(--wanchan-purple-lightest);
+    --button-hover-content-color: var(--wanchan-purple);
+    --button-hover-shadow: none;
+
+    --button-active-border-color: transparent;
+    --button-active-background-color: var(--wanchan-purple-lighter);
+    --button-active-content-color: var(--wanchan-purple-dark);
+    --button-active-shadow: none;
+
+    font-weight: normal;
+    border-style: none;
+    border-width: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--outline-item-height);
+    padding: 0 1.5em;
+    cursor: pointer;
+    transition: background-color var(--animation-duration) ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Dark mode outline item styling */
+:root[data-theme=dark] .outline-item {
+    --button-hover-background-color: #1f2937;
+    --button-hover-content-color: var(--wanchan-amber);
+    --button-active-background-color: #1f2937;
+    --button-active-content-color: var(--wanchan-amber);
+}
+
+
+/* Settings styles */
+.settings-group {
+    margin: 0 var(--settings-group-horizontal-margin);
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color-light);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Wanchan Shadow */
+    border: 1px solid var(--wanchan-border-light);
+    border-radius: var(--settings-group-border-radius);
+}
+
+
+.settings-group.settings-group-top-margin {
+    margin-top: 24px;
+}
+
+
+.settings-item-group-item {
+    flex: 0 1 auto;
+    padding-right: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+
+.settings-item-group-item-label {
+    font-size: var(--font-size-small);
+    line-height: 1;
+    padding: 0.5em 0.5em;
+}
+
+/* Settings Dictionary Item Separator */
+.modal-body .settings-item {
+    border-bottom: var(--thin-border-size) solid var(--separator-color2);
+}
+
+input[type=text].short-height,
+input[type=number].short-height,
+select.short-height {
+    height: var(--input-short-height);
+    margin-top: 0;
+    line-height: var(--line-height);
+}
+
+/* Wanchan - Welcome Page Overrides */
+/* Hide 'Language' setting item */
+.settings-group .settings-item:has([data-setting='general.language']) {
+    display: none;
+}
+
+/* Hide 'New to Yomitan?' link content (only matches welcome.html structure) */
+h2+.settings-group a[href*='yomitan.wiki'] .settings-item-inner {
+    display: none;
+}
+
+/* Wanchan - Settings Page Overrides */
+
+/* Scanning: Hide 'JP/ZH/YUE/KO only' description */
+.heading-container:has(#scanning)+.settings-group .settings-item.jpzhyueko-only .settings-item-description {
+    display: none;
+}
+
+/* Appearance: Hide Glossary Layout Mode setting */
+.heading-container:has(#appearance)+.settings-group .settings-item:has([data-setting='general.glossaryLayoutMode']) {
+    display: none;
+}
+
+/* Appearance: Hide Compact Tags setting */
+.heading-container:has(#appearance)+.settings-group .settings-item:has([data-setting='general.compactTags']) {
+    display: none;
+}
+
+/* Result Display: Hide Average Frequency setting */
+.heading-container:has(#result-display)+.settings-group .settings-item:has([data-setting='general.averageFrequency']) {
+    display: none;
+}
+
+/* Hide Kaikki to Yomitan link */
+p:has(a[href="https://yomidevs.github.io/kaikki-to-yomitan/"]) {
+    display: none;
+}
+
+/* Hide Homepage link */
+.homepage {
+    display: none;
+}
+
+li:has(a[href="https://github.com/yomidevs/yomitan/blob/master/CONTRIBUTING.md"]) {
+    display: none;
+}
+
+li:has(a[href="https://yomitan.wiki/dictionaries/"]) {
+    display: none;
+}
+
+a[href="https://github.com/yomidevs/yomitan/blob/master/docs/dictionaries.md#dictionaries"] {
+    display: none;
+}
+
+#action-popup-container .inline-icon {
+    border-radius: 50%;
+    padding: 1px;
+    background-color: #ffffff;
+}
+h2+.settings-group a[href*='https://yomitan.wiki/dictionaries/'] {
+    display: none;
+}
+
+.profile-entry-header .profile-entry-header-text:first-of-type {
+    display: none;
+}
+
+#action-popup {
+    border-radius: 5%;
+    align-self: center;
+}
+
+.quick-start-img {
+    border-radius: 5%;
+}
+
+/* Hide info page */
+
+li:has(a[href="https://github.com/yomidevs/yomitan/releases"]) {
+    display: none;
+}
+
+li:has(a[href="https://yomitan.wiki"]) {
+    display: none;
+}
+
+li:has(a[href="https://github.com/yomidevs/yomitan"]) {
+    display: none;
+}
+
+a[href="https://yomitan.wiki/privacy/"] {
+    display: none;
+}
+
+li:has(a[href="https://github.com/yomidevs/yomitan/issues/new/choose"]) {
+    display: none;
+}
+
+li:has(a[href="https://addons.mozilla.org/en-US/firefox/addon/yomitan/"]) {
+    display: none;
+}
+
+/* Tab View System */
+
+/* Tab content transition - using opacity for smooth fade */
+.heading-container,
+.settings-group {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.wanchan-tab-hidden {
+    display: none !important;
+}
+
+.wanchan-tab-transparent {
+    opacity: 0 !important;
+}
+
+/* Active tab styling - Light mode uses purple */
+.sidebar-body a.active {
+    background-color: var(--wanchan-purple-lightest);
+    color: var(--wanchan-purple);
+}
+
+/* Active tab styling - Dark mode uses amber */
+:root[data-theme=dark] .sidebar-body a.active {
+    background-color: var(--button-active-background-color);
+    color: var(--wanchan-amber);
+}
+
+.content-left .sidebar .sidebar-body a[href*='#profile'],
+.content-left .sidebar .sidebar-body a[href*='#text-parsing'],
+.content-left .sidebar .sidebar-body a[href*='#clipboard'],
+.content-left .sidebar .sidebar-body a[href*='#accessibility'],
+.content-left .sidebar .sidebar-body a[href*='#security'],
+.content-left .sidebar-bottom {
+    display: none;
+}
+
+.settings-item-right {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+/* Collapsed sidebar size */
+:root {
+    --sidebar-size: 110px;
+}
+
+/* Center sidebar content vertically and hide scrollbar */
+.sidebar-inner.scrollbar {
+    /* Center content via child margin: auto to prevent top-clipping on overflow */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar-inner.scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Sidebar body styling with rounded borders */
+.sidebar-body {
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px solid var(--wanchan-border-light);
+    border-left: none;
+    border-top-right-radius: var(--settings-group-border-radius);
+    border-bottom-right-radius: var(--settings-group-border-radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hide all anchor labels by default */
+.sidebar-body .outline-item-label {
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-width 0.3s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+/* Expand sidebar and show all labels on hover */
+.sidebar:hover {
+    --sidebar-size: 230px;
+}
+
+.sidebar:hover .sidebar-body .outline-item-label {
+    max-width: 200px;
+    opacity: 1;
+}
+
+/* Dark mode: sidebar active icon uses amber */
+:root[data-theme=dark] .sidebar-body a.active .outline-item-icon {
+    color: var(--wanchan-amber);
+}
+
+/* Light mode: sidebar active icon uses purple */
+:root:not([data-theme=dark]) .sidebar-body a.active .outline-item-icon {
+    color: var(--wanchan-purple);
+}
+
+/* Sidebar icon transition */
+.sidebar-body .outline-item-icon {
+    transition: color 0.2s ease-in-out;
+}
+
+/* Sidebar width transition */
+.sidebar {
+    transition: width 0.3s ease-in-out, --sidebar-size 0.3s ease-in-out;
+}
+
+/* Update: Change 800px breakpoint to 1200px for FAB/Scanning container */
+@media (max-width: 1200px), (hover: none) and (max-width: 1100px) {
+    .fab-container {
+        visibility: visible;
+    }
+}
+
+/* Wanchan - Sidebar logic for mobile */
+@media (max-width: 850px) {
+    .sidebar {
+        max-width: 0;
+    }
+    .preview-sidebar {
+        min-width: 0%;
+        max-width: 0%;
+    }
+}
+
+/* Update: Add 800px media for specific flex-label */
+@media (max-width: 800px) {
+    .settings-item-group-item.flex-label {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Update: Increase 400px breakpoint to 500px */
+@media (max-width: 500px) {
+    :root {
+        --settings-group-horizontal-margin: calc(var(--main-content-padding) * -1);
+        --settings-group-inner-horizontal-padding: var(--main-content-padding);
+        --settings-group-inner-horizontal-padding-half-wrappable: var(--settings-group-inner-horizontal-padding);
+        --settings-group-wrap: wrap;
+    }
+
+    .settings-item-right {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+    }
+}
+
+/* Hide Privacy page */
+
+.settings-item:has(a[href="https://en.wikipedia.org/wiki/MeCab"]) {
+    display: none;
+}

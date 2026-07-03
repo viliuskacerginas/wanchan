@@ -1,0 +1,114 @@
+/*
+ * Copyright (C) 2026       Vilius Kačerginas
+ * Copyright (C) 2023-2025  Yomitan Authors
+ * Copyright (C) 2020-2022  Yomichan Authors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+ 
+/* Generated Overrides for action-popup.css */
+
+/* Variables */
+
+:root {
+    --font-size-no-units: 14;
+    --font-size: calc(1px * var(--font-size-no-units));
+    --line-height-no-units: 20;
+    --line-height: calc(var(--line-height-no-units) / var(--font-size-no-units));
+    --background-color: var(--wanchan-bg-light);
+    --text-color: var(--wanchan-text-primary-light);
+}
+
+
+
+:root[data-theme=dark] {
+    --background-color: var(--wanchan-bg-dark);
+    --text-color: var(--wanchan-text-primary-dark);
+}
+
+
+
+body {
+    padding: 10px;
+    margin: 0;
+    font-family: inherit;
+    /* Use material.css font */
+    font-size: var(--font-size);
+    width: max-content;
+    height: max-content;
+    background-color: var(--background-color);
+}
+
+
+
+.toggle {
+    box-sizing: border-box;
+    width: 90px;
+    height: 48px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--wanchan-slate);
+    border-radius: 24px;
+    /* Pill shape */
+    display: inline-block;
+}
+
+
+
+/* Light mode toggle-on styling - Purple */
+.toggle-on {
+    padding-right: 24px;
+    left: 0;
+    right: 50%;
+    color: #ffffff;
+    border-color: var(--wanchan-purple-dark);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 3px 5px rgba(0, 0, 0, 0);
+    /* Wanchan Purple Gradient for Light Mode */
+    background-image: linear-gradient(135deg, var(--wanchan-purple), var(--wanchan-purple-dark));
+    background-repeat: repeat-x;
+}
+
+
+input[type=checkbox]:focus:not(:focus-visible)~.toggle-group>.toggle-on:not(:hover) {
+    background-image: linear-gradient(135deg, var(--wanchan-purple), var(--wanchan-purple-dark));
+}
+
+
+/* Dark mode toggle-on styling - Amber */
+:root[data-theme=dark] .toggle-on {
+    border-color: var(--wanchan-amber-dark);
+    background-image: linear-gradient(135deg, var(--wanchan-amber), #f59e0b);
+}
+
+
+:root[data-theme=dark] input[type=checkbox]:focus:not(:focus-visible)~.toggle-group>.toggle-on:not(:hover) {
+    background-image: linear-gradient(135deg, var(--wanchan-amber), #f59e0b);
+}
+
+
+
+.toggle-handle {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
+    width: 0;
+    border-style: solid;
+    border-width: 0 1px;
+    border-radius: 20px;
+    /* Rounded handle */
+    border-color: #cccccc;
+}

@@ -1,0 +1,388 @@
+/*
+ * Copyright (C) 2026       Vilius Kačerginas
+ * Copyright (C) 2023-2025  Yomitan Authors
+ * Copyright (C) 2020-2022  Yomichan Authors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+ 
+/* Generated Overrides for display.css */
+
+/* Variables */
+:root {
+    /* Strings */
+    --compact-list-separator: ' | ';
+
+    --disambiguation-separator: ', ';
+    --disambiguation-reading-separator: ':';
+
+    --headword-separator: '\3001';
+
+    --inflection-separator: '\00AB';
+
+    /* Layout */
+    --font-size-no-units: 14;
+    --font-size: calc(1px * var(--font-size-no-units));
+    --query-parser-font-size-no-units: 2;
+    --query-parser-font-size: calc(1em * var(--query-parser-font-size-no-units));
+    --h2-font-size-no-units: 1.25;
+    --h2-font-size: calc(1em * var(--h2-font-size-no-units));
+
+    --headword-font-size-no-units: 2;
+    --headword-font-size: calc(1em * var(--headword-font-size-no-units));
+    --headword-reading-font-size-no-units: 0.75;
+    --headword-reading-font-size: calc(var(--headword-reading-font-size-no-units) * var(--headword-font-size));
+    --headword-reading-space: 0.5em;
+    --headword-list-end-space: 0.5em;
+    --headword-thin-border-size: calc(1em / (var(--headword-font-size-no-units) * var(--font-size-no-units)));
+
+    --line-height-no-units: 20;
+    --line-height: calc(var(--line-height-no-units) / var(--font-size-no-units));
+
+    --thin-border-size: calc(1em / var(--font-size-no-units));
+
+    --action-button-size-no-units: 16;
+    --action-button-size: calc(1em * (var(--action-button-size-no-units) / var(--font-size-no-units)));
+    --action-button-padding: 0.3em;
+
+    --list-margin: 0.72em;
+    --content-width: 100%;
+    --main-content-vertical-padding: 0em;
+    --main-content-horizontal-padding: 0em;
+    --entry-horizontal-padding: 1em;
+    /* More breathing room */
+    --entry-vertical-padding: 1em;
+    --query-horizontal-padding: 1em;
+
+    --sidebar-width-no-units: 40;
+    --sidebar-width: calc(1em * (var(--sidebar-width-no-units) / var(--font-size-no-units)));
+    --sidebar-button-height-no-units: 30;
+    --sidebar-button-height: calc(1em * (var(--sidebar-button-height-no-units) / var(--font-size-no-units)));
+    --sidebar-button-icon-size-no-units: 16;
+    --sidebar-button-icon-size: calc(1em * (var(--sidebar-button-icon-size-no-units) / var(--font-size-no-units)));
+
+    --progress-bar-height-no-units: 4;
+    --progress-bar-height: calc(1em * (var(--progress-bar-height-no-units) / var(--font-size-no-units)));
+    --progress-bar-active-transition-duration: 0.125s;
+    --progress-bar-active-transition-start-delay: 0.0625s;
+    --progress-bar-animation-duration: 2s;
+
+    --entry-current-indicator-width-no-units: 4;
+    --entry-current-indicator-width: calc(1em * var(--entry-current-indicator-width-no-units) / var(--font-size-no-units));
+    --entry-current-indicator-transition-duration: 0.125s;
+
+    --tag-height-no-units: 22;
+    --tag-height: calc(1em * var(--tag-height-no-units) / var(--font-size-no-units));
+    --tag-font-size-no-units: 11;
+    --tag-font-size: calc(1em * var(--tag-font-size-no-units) / var(--font-size-no-units));
+    --tag-border-size-no-units: 1;
+    --tag-border-size: calc(1em * (var(--tag-border-size-no-units) / var(--font-size-no-units)));
+    --tag-border-style: solid;
+    --tag-font-weight: bold;
+    --tag-border-radius: 10%;
+    /* Pill Shape */
+
+    --list-padding1: 1.4em;
+    --list-padding2: var(--list-padding1);
+
+    --entry-current-indicator-triangle-size-no-units: 6;
+    --entry-current-indicator-triangle-size: calc(1em * (var(--entry-current-indicator-triangle-size-no-units) / var(--font-size-no-units)));
+
+    --overlay-panel-translate-distance: 4em;
+
+    --disambiguation-space: 0.25em;
+
+    --animation-duration: 0.125s;
+    --animation-duration2: calc(2 * var(--animation-duration));
+ /* \/ Setting default dict to collapsible and min line counts to \/ */
+    --collapsible-definition-line-count: 27;
+    --collapsible-kanji-glyph-data-line-count: 10;
+    --kanji-glyph-table-header-height: calc((20em / var(--font-size-no-units)) + var(--kanji-glyph-table-cell-padding) * 3);
+    --collapsible-definition-test-offset: 0.2em;
+    --collpasible-kanji-glyph-data-test-offset: 0.2em;
+
+    /* Colors */
+    --background-color: var(--wanchan-bg-light);
+    --gloss-image-background-color: #eeeeee;
+    --link-color: var(--wanchan-purple-dark);
+
+    --text-color: var(--wanchan-text-primary-light);
+    --reason-text-color: var(--text-color-light3);
+
+    --headword-text-color: var(--text-color);
+    --headword-text-color-popular: var(--wanchan-purple-darker);
+    --headword-text-color-rare: var(--text-color-light4);
+    --headword-furigana-text-color: var(--headword-text-color);
+    --headword-furigana-text-color-popular: var(--headword-text-color-popular);
+    --headword-furigana-text-color-rare: var(--headword-text-color-rare);
+    --headword-reading-text-color: var(--headword-furigana-text-color);
+    --headword-reading-text-color-popular: var(--headword-furigana-text-color-popular);
+    --headword-reading-text-color-rare: var(--headword-furigana-text-color-rare);
+    --headword-kanji-text-color: var(--headword-text-color);
+    --headword-kanji-text-color-popular: var(--headword-text-color-popular);
+    --headword-kanji-text-color-rare: var(--headword-text-color-rare);
+    --headword-kanji-border-color: var(--dark-border-color);
+    --headword-kanji-border-color-popular: var(--headword-kanji-border-color);
+    --headword-kanji-border-color-rare: var(--headword-kanji-border-color);
+
+    --kanji-glyph-table-cell-padding: 0.36em;
+
+    --light-border-color: var(--wanchan-border-light);
+    --medium-border-color: #dddddd;
+    --dark-border-color: #777777;
+
+    --tag-text-color: #ffffff;
+    --tag-border-color: transparent;
+    --tag-default-background-color: var(--wanchan-slate);
+    --tag-name-background-color: #9333ea;
+    --tag-expression-background-color: #f59e0b;
+    --tag-popular-background-color: #2563eb;
+    --tag-frequent-background-color: #0ea5e9;
+    --tag-archaism-background-color: #dc2626;
+    --tag-dictionary-background-color: #7c3aed;
+    --tag-frequency-background-color: #059669;
+    --tag-part-of-speech-background-color: #4b5563;
+    --tag-search-background-color: #64748b;
+    --tag-pronunciation-dictionary-background-color: #7c3aed;
+
+    --sidebar-background-color: #f8f9fa;
+
+    --sidebar-button-background-color: transparent;
+    --sidebar-button-background-color-hover: #cccccc;
+    --sidebar-button-background-color-active: #aaaaaa;
+    --sidebar-button-danger-background-color: transparent;
+    --sidebar-button-danger-background-color-hover: #dd2222;
+    --sidebar-button-danger-background-color-active: #bb2222;
+    --sidebar-button-icon-color: #333333;
+    --sidebar-button-disabled-icon-color: #888888;
+    --sidebar-button-danger-icon-color: #ffffff;
+
+    --scrollbar-thumb-color: #c1c1c1;
+    --scrollbar-track-color: #f1f1f1;
+    --scrollbar-inverse-thumb-color: #444444;
+    --scrollbar-inverse-track-color: #2f2f2f;
+
+    --progress-bar-track-color: #cccccc;
+    --progress-bar-indicator-color: var(--accent-color);
+    --entry-current-indicator-color: var(--accent-color);
+
+    --notification-text-color: #2f2f2f;
+    --notification-background-color: #f1f1f1;
+    --notification-background-color-light: #e1e1e1;
+    --notification-background-color-lighter: #bbbbbb;
+    --notification-shadow-color: rgba(255, 255, 255, 0.25);
+
+    --action-button-hover-color: #dddddd;
+    --action-button-active-color: #c1c1c1;
+}
+
+:root[data-theme=dark] {
+    /* Colors */
+    --background-color: var(--wanchan-bg-dark);
+    --gloss-image-background-color: #2f2f2f;
+    --link-color: var(--wanchan-amber);
+
+    --text-color: var(--wanchan-text-primary-dark);
+    --reason-text-color: var(--text-color-light3);
+
+    --headword-text-color: var(--text-color);
+    --headword-text-color-popular: var(--wanchan-amber);
+    --headword-text-color-rare: var(--text-color-light4);
+    --headword-furigana-text-color: var(--headword-text-color);
+    --headword-furigana-text-color-popular: var(--headword-text-color-popular);
+    --headword-furigana-text-color-rare: var(--headword-text-color-rare);
+    --headword-reading-text-color: var(--headword-furigana-text-color);
+    --headword-reading-text-color-popular: var(--headword-furigana-text-color-popular);
+    --headword-reading-text-color-rare: var(--headword-furigana-text-color-rare);
+    --headword-kanji-border-color: var(--dark-border-color);
+
+    --light-border-color: var(--wanchan-border-dark);
+    --medium-border-color: #3f3f3f;
+    --dark-border-color: #888888;
+
+    --tag-text-color: #f1f1f1;
+    --tag-border-color: transparent;
+    --tag-default-background-color: #66648b;
+    --tag-name-background-color: #9333ea;
+    --tag-expression-background-color: #d97706;
+    --tag-popular-background-color: #1d4ed8;
+    --tag-frequent-background-color: #0284c7;
+    --tag-archaism-background-color: #b91c1c;
+    --tag-dictionary-background-color: #7c3aed;
+    --tag-frequency-background-color: #047857;
+    --tag-part-of-speech-background-color: #565656;
+    --tag-search-background-color: #69696e;
+    --tag-pronunciation-dictionary-background-color: #7c3aed;
+
+    --sidebar-background-color: #282828;
+
+    --sidebar-button-background-color: transparent;
+    --sidebar-button-background-color-hover: #3a3a3a;
+    --sidebar-button-background-color-active: #5a5a5a;
+    --sidebar-button-danger-background-color: transparent;
+    --sidebar-button-danger-background-color-hover: #dd2222;
+    --sidebar-button-danger-background-color-active: #bb2222;
+    --sidebar-button-icon-color: #cccccc;
+    --sidebar-button-disabled-icon-color: #777777;
+    --sidebar-button-danger-icon-color: #ffffff;
+
+    --scrollbar-thumb-color: #444444;
+    --scrollbar-track-color: #2f2f2f;
+    --scrollbar-inverse-thumb-color: #c1c1c1;
+    --scrollbar-inverse-track-color: #f1f1f1;
+
+    --progress-bar-track-color: #3a3a3a;
+    --progress-bar-indicator-color: var(--accent-color);
+    --entry-current-indicator-color: var(--accent-color);
+
+    --notification-text-color: #ffffff;
+    --notification-background-color: #333333;
+    --notification-background-color-light: #555555;
+    --notification-background-color-lighter: #666666;
+    --notification-shadow-color: rgba(0, 0, 0, 0.5);
+
+    --action-button-hover-color: #282828;
+    --action-button-active-color: #444444;
+}
+
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: var(--list-padding);
+}
+
+/* Scrollbars */
+/* Scrollbars - Sleek/Thin */
+:root:not([data-theme=light]) .scrollbar {
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+:root:not([data-theme=light]) .scrollbar::-webkit-scrollbar {
+    width: 6px;
+    /* Thin */
+}
+
+:root:not([data-theme=light]) .scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 99px;
+    /* Rounded */
+}
+
+:root:not([data-theme=light]) .scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.tag[data-category=frequent] {
+    --tag-color: var(--tag-frequent-background-color);
+    display: none;
+}
+
+.tag[data-category=archaism] .tag-label .tag-label-content {
+    color: hsl(0, 100%, 45%);
+}
+
+.tag[data-category=dictionary] {
+    --tag-color: var(--tag-dictionary-background-color);
+    display: none;
+}
+
+.tag[data-category=frequency] {
+    --tag-color: var(--tag-frequency-background-color);
+    display: none;
+}
+
+.tag[data-category="sense"] {
+    display: none;
+}
+
+:root[data-result-output-mode=merge] .headword[data-frequency=rare] {
+    --headword-current-text-color: var(--headword-text-color-rare);
+    --headword-current-reading-text-color: var(--headword-reading-text-color-rare);
+    --headword-current-furigana-text-color: var(--headword-furigana-text-color-rare);
+    --headword-current-kanji-text-color: var(--headword-kanji-text-color-rare);
+    --headword-current-kanji-border-color: var(--headword-kanji-border-color-rare);
+    font-size: 80%;
+}
+
+/* Emoji look */
+
+.tag-label {    
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+    border: 1px solid var(--wanchan-purple-base);
+    background: none;
+}
+
+:root:not([data-theme=light]) .tag-label {
+    border: 1px solid var(--wanchan-amber-dark);
+}
+
+.headword-list-tag-list .tag .tag-label {
+    font-size: 0 !important;
+    visibility: hidden;
+}
+
+.headword-list-tag-list .tag .tag-label .tag-label-content {
+    visibility: visible;
+    font-size: 1.2rem;
+    line-height: 1;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+/* Headword look */
+
+.headword-term {
+    color: var(--headword-current-text-color);
+    font-size: var(--headword-font-size);
+    font-weight: bold;
+    /* Wanchan Bold */
+}
+
+:root[data-result-output-mode=merge] .headword-list-details {
+    display: inline;
+}
+
+.gloss-content {
+    display: block;
+    white-space: pre-line;
+    font-weight: bold;
+}
+
+/* Footer look */
+
+.footer-notification {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.6);
+}
+
+.inflection-source-icon {
+    width: auto;
+    margin-right: auto;
+}
+
+/* Kanji tab centering and restyling */
+.kanji-glyph-container {
+    text-align: center;
+}
+
+.kanji-glyph {
+    font-size: 4em;
+}
+
+.kanji-glyph-data {
+    justify-self: center;
+    margin-top: none;
+}
+
+.kanji-glyph-table>tbody>tr>* {
+    text-align: center;
+}

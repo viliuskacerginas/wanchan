@@ -1,0 +1,92 @@
+/*
+ * Copyright (C) 2026       Vilius Kačerginas
+ * Copyright (C) 2023-2025  Yomitan Authors
+ * Copyright (C) 2020-2022  Yomichan Authors
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+ 
+/* Generated Overrides for search-settings.css */
+
+:root {
+    --padding: 10px;
+    --padding-negative: calc(var(--padding) * -1);
+    --content-width: 700px;
+    --shadow-vertical: 0 1px 4px 0 var(--shadow-color), 0 2px 2px 0 var(--shadow-color);
+    --shadow-left: -1px 0 4px 0 var(--shadow-color), -2px 0 2px 0 var(--shadow-color);
+    --settings-group-horizontal-margin: 0;
+    --settings-group-inner-vertical-padding: 0.85em;
+    --settings-group-inner-horizontal-padding: 1.5em;
+    --settings-group-inner-horizontal-padding-half: calc(var(--settings-group-inner-horizontal-padding) * 0.5);
+    --settings-group-inner-horizontal-padding-half-wrappable: var(--settings-group-inner-horizontal-padding-half);
+    --settings-group-inner-horizontal-padding-fourth: calc(var(--settings-group-inner-horizontal-padding) * 0.25);
+    --settings-group-border-radius: 0.3em;
+    --settings-group-right-max-height: 40px;
+    --show-preview-label-height: 40px;
+
+    --font-size-no-units: 14;
+    --font-size: calc(1px * var(--font-size-no-units));
+    --font-size-small: 12px;
+    --outline-item-height: 40px;
+    --outline-item-icon-size: 32px;
+    --input-short-width: calc(var(--input-width-large) / 2 - var(--padding) / 2);
+    --input-short-height: 30px;
+    --input-medium-width: calc(var(--input-width-large) * 0.75);
+    --fab-button-size: 56px;
+    --fab-button-padding: 16px;
+    --modal-width: 600px;
+    --modal-height: 400px;
+    --modal-width-small: 400px;
+    --modal-height-small: 200px;
+    --modal-width-medium: 600px;
+    --modal-height-medium: 400px;
+    --modal-transition-offset: -64px;
+    --badge-size: 16px;
+
+    --link-color: var(--accent-color);
+    --link-color-hover: var(--accent-color-dark);
+    --separator-color1: #cccccc;
+    --separator-color2: #eeeeee;
+    --outline-item-background-color: rgba(13, 13, 13, 0);
+    --outline-item-background-color-hover: rgba(13, 13, 13, 0.15);
+    --warning-color: #96751c;
+    --warning-color-light: #edc75e;
+    --dim-background-color: rgba(0, 0, 0, 0.5);
+    --content-dimmer-color: rgba(0, 0, 0, 0.1);
+    --advanced-color: #6640be;
+    --advanced-color-lighter: hsl(258, 50%, 75%);
+    --advanced-color-transparent25: rgba(102, 64, 190, 0.5);
+
+    --modal-padding-horizontal: 1em;
+    --modal-padding-vertical: 0.625em;
+    --modal-padding-vertical-half: calc(var(--modal-padding-vertical) * 0.5);
+    --modal-button-spacing: 0.625em;
+}
+
+
+/* Dark mode overrides */
+:root[data-theme=dark] {
+    --link-color: var(--wanchan-amber);
+    --link-color-hover: var(--wanchan-amber-dark);
+    --separator-color1: #374151;
+    --separator-color2: #1f2937;
+}
+
+
+.settings-item-group-item-label {
+    font-size: var(--font-size-small);
+    line-height: 1;
+    padding: 0.5em 0.5em;
+}
+
