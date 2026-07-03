@@ -8,7 +8,7 @@
 
 [![Discord](https://dcbadge.limes.pink/api/server/YkQrXW6TXF?style=for-the-badge)](https://discord.gg/YkQrXW6TXF) -->
 
-:wave: **„Wanchan“ yra „Yomitan“ atšaka (fork), kuri savo ruožtu yra (https://foosoft.net/posts/passing-the-torch-to-yomitan/) projektui „Yomichan“** ([migracijos gidas](https://yomitan.wiki/yomichan-migration/)). Savo ruožtu atlikau pakeitimus, pritaikydamas projektą lietuvių kalbai, tuo pačiu išlaikydamas visą pamatinį funkcionalumą, užtikrinantį **kad projektas veiktų naujausiose naršyklių versijose ir prie jo būtų lengva prisidėti**.
+:wave: **„Wanchan“ yra „Yomitan“ atšaka (angl. fork), kuri savo ruožtu kilo iš  (https://foosoft.net/posts/passing-the-torch-to-yomitan/) projekto „Yomichan“** žr.([migracijos gida](https://yomitan.wiki/yomichan-migration/)). Siekdamas sukurti lietuvišką alternatyvą, atlikau pakeitimus, pritaikiau projektą lietuvių kalbai ir jį modernizavau. Tačiau kartu išlaikiau visą pamatinį funkcionalumą, užtikrinantį, kad projektas veiktų naujausiose naršyklių versijose ir prie jo būtų lengva prisidėti.**.
 
 📢 **Nauji bendraautoriai [laukiami](#prisidėjimas-contributing)!**
 
