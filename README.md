@@ -25,6 +25,7 @@
 - 🔍 Individualizuotas paieškos puslapis patogiam pasirinktinių paieškos užklausų vykdymui.
 - 📖 Kelių žodynų formatų, įskaitant [EPWING](https://ja.wikipedia.org/wiki/EPWING), palaikymas per [Yomitan Import](https://github.com/yomidevs/yomitan-import) įrankį.
 - ✨ Švarus, modernus kodas palengvina kūrėjams [prisidėti](#prisidėjimas-contributing) kuriant naujas funkcijas ir kalbas.
+
   Pastaba: Kai kurios originalios „Yomitan“ funkcijos (pvz., [Mecab; Wanchan API]) 1.0.0.0 versijoje yra paslėptos. Taip pat kai kurios funkcijos buvo supaprastintos ir pritaikytos intuityvesniam naudojimuisi (pvz. Tabs; Popup; ).
 
 ## Dokumentacija / Kaip naudotis
