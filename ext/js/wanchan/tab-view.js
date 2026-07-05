@@ -218,17 +218,34 @@ document.addEventListener('DOMContentLoaded', () => {
      * Initialize the tab view system
      */
     function init() {
+        const sidebarBody = document.querySelector('.sidebar .sidebar-body');
+        const sidebarBottom = document.querySelector('.sidebar .sidebar-bottom');
+        if (sidebarBody && sidebarBottom) {
+            sidebarBody.appendChild(sidebarBottom);
+        }
+
+        if (sidebarBody) {
+            const selectors = [
+                'a[href="#profile"]',
+                'a[href*="#text-parsing"]',
+                'a[href*="#clipboard"]',
+                'a[href="#shortcuts"]',
+                'a[href="#backup"]'
+            ];
+            for (const selector of selectors) {
+                const elements = sidebarBody.querySelectorAll(selector);
+                for (const el of elements) {
+                    el.classList.add('advanced-only');
+                }
+            }
+        }
+
         if (!buildTabMap()) { return; }
 
         hideAllTabs(DEFAULT_TAB);
         updateActiveLink(DEFAULT_TAB);
         currentTab = DEFAULT_TAB;
         setupClickHandlers();
-
-        if (DEV_MODE) {
-            // eslint-disable-next-line no-console
-            console.log(`[tab-view] Initialized. Common elements: ${commonElements.length}`);
-        }
     }
 
     // Run initialization

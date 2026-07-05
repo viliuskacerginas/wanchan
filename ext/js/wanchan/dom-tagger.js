@@ -65,19 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
             targetCFound = true;
         }
 
-        if (DEV_MODE) {
-            if (targetAFound || targetBFound || targetCFound) {
-                // eslint-disable-next-line no-console
-                console.log(`Tagged section: ${id}`);
-            }
-            if (targetAFound && !targetBFound) {
-                // eslint-disable-next-line no-console
-                console.warn(`MISSING SETTINGS GROUP for id: ${id}`);
-            }
-            if (!targetCFound) {
-                // eslint-disable-next-line no-console
-                console.warn(`MISSING SIDEBAR LINK for id: ${id}`);
-            }
-        }
+
     }
 });

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
- 
+
 /* Generated Overrides for settings.css */
 
 /* Variables */
@@ -133,10 +133,10 @@
 
 /* Dark mode outline item styling */
 :root[data-theme=dark] .outline-item {
-    --button-hover-background-color: #1f2937;
-    --button-hover-content-color: var(--wanchan-amber);
-    --button-active-background-color: #1f2937;
-    --button-active-content-color: var(--wanchan-amber);
+    --button-hover-background-color: var(--wanchan-text-primary-light);
+    --button-hover-content-color: var(--wanchan-amber-dark);
+    --button-active-background-color: var(--wanchan-text-primary-dark);
+    --button-active-content-color: var(--wanchan-amber-dark);
 }
 
 
@@ -315,15 +315,11 @@ li:has(a[href="https://addons.mozilla.org/en-US/firefox/addon/yomitan/"]) {
 /* Active tab styling - Dark mode uses amber */
 :root[data-theme=dark] .sidebar-body a.active {
     background-color: var(--button-active-background-color);
-    color: var(--wanchan-amber);
+    color: var(--wanchan-amber-dark);
 }
 
-.content-left .sidebar .sidebar-body a[href*='#profile'],
-.content-left .sidebar .sidebar-body a[href*='#text-parsing'],
-.content-left .sidebar .sidebar-body a[href*='#clipboard'],
 .content-left .sidebar .sidebar-body a[href*='#accessibility'],
-.content-left .sidebar .sidebar-body a[href*='#security'],
-.content-left .sidebar-bottom {
+.content-left .sidebar .sidebar-body a[href*='#security'] {
     display: none;
 }
 
@@ -354,6 +350,7 @@ li:has(a[href="https://addons.mozilla.org/en-US/firefox/addon/yomitan/"]) {
 .sidebar-body {
     margin-top: auto;
     margin-bottom: auto;
+    padding: 1.5em 0;
     border: 1px solid var(--wanchan-border-light);
     border-left: none;
     border-top-right-radius: var(--settings-group-border-radius);
@@ -400,6 +397,10 @@ li:has(a[href="https://addons.mozilla.org/en-US/firefox/addon/yomitan/"]) {
     transition: width 0.3s ease-in-out, --sidebar-size 0.3s ease-in-out;
 }
 
+.sidebar-bottom {
+    padding: 1.5em 0 0 0;
+}
+
 /* Update: Change 800px breakpoint to 1200px for FAB/Scanning container */
 @media (max-width: 1200px), (hover: none) and (max-width: 1100px) {
     .fab-container {
@@ -439,10 +440,4 @@ li:has(a[href="https://addons.mozilla.org/en-US/firefox/addon/yomitan/"]) {
         padding-top: 1.5em;
         padding-bottom: 1.5em;
     }
-}
-
-/* Hide Privacy page */
-
-.settings-item:has(a[href="https://en.wikipedia.org/wiki/MeCab"]) {
-    display: none;
 }

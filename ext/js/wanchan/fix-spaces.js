@@ -139,7 +139,6 @@ function extractRawStrings(filePath) {
  * Main
  */
 async function main() {
-    console.log('Reading text-swapper.js...');
     const swapperContent = fs.readFileSync(TEXT_SWAPPER_PATH, 'utf8');
 
     // Extract the TRANSLATIONS object regex
@@ -147,7 +146,6 @@ async function main() {
     const translationsRegex = /const TRANSLATIONS = \{([\s\S]*?)\};/;
     const match = translationsRegex.exec(swapperContent);
     if (!match) {
-        console.error('Could not find TRANSLATIONS object in text-swapper.js');
         return;
     }
 
@@ -163,7 +161,6 @@ async function main() {
     //    - Reconstruct the line with the untrimmed Key.
     //    - Add corresponding spaces to the Value.
 
-    console.log('Scanning HTML files for raw strings...');
     const htmlFiles = getAllFiles(SOURCE_DIR, '.html');
 
     // Map of TrimmedString -> Set of potentially different variations with spaces
@@ -185,8 +182,6 @@ async function main() {
             trimmedToRawMap.get(trimmed).add(raw);
         }
     }
-
-    console.log(`Found ${trimmedToRawMap.size} unique trimmed strings in HTML.`);
 
     // Read text-swapper.js lines
     const lines = swapperContent.split('\n');
@@ -270,11 +265,7 @@ async function main() {
     }
 
     if (modificationCount > 0) {
-        console.log(`Applied ${modificationCount} fixes.`);
         fs.writeFileSync(TEXT_SWAPPER_PATH, newLines.join('\n'), 'utf8');
-        console.log('Updated text-swapper.js');
-    } else {
-        console.log('No changes needed.');
     }
 }
 

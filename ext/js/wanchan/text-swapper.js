@@ -297,7 +297,7 @@
         '. This information can also be added to Anki cards to provide additional context. ': '. Ši informacija taip pat gali būti pridėta prie Anki kortelių, kad suteiktų papildomo konteksto. ',
         '<iframe>': '<iframe>',
         ' A card is considered a duplicate if the value of the first field matches that of any other card. By default, this check will include cards across all decks in a collection, but this constraint can be relaxed by using either the ': ' Kortelė laikoma dublikatu, jei pirmojo lauko reikšmė sutampa su bet kurios kitos kortelės reikšme. Pagal nutylėjimą, šis patikrinimas apims korteles visose kolekcijos kaladėse, tačiau šį apribojimą galima sušvelninti naudojant arba ',
-        ' A keyboard modifier key can be used to activate text scanning when the cursor is moved. Alternatively, the ': ' Klaviatūros modifikavimo klavišas gali būti naudojamas teksto skenavimui aktyvuoti perkeliant žymeklį. Arba, ',
+        ' A keyboard modifier key can be used to activate text scanning when the cursor is moved. Alternatively, the ': ' Klaviatūros modifikavimo klavišas gali būti naudojamas teksto skenavimui aktyvuoti perkeliant žymeklį. Arba "',
         ' A malicious dictionary which contains malicious CSS may try to execute Javascript. For example, if the output of the Yomitan API is used in Anki, then the resulting Anki card may execute unintended Javascript. The risk in this case is similar to downloading a malicious Anki deck. Namely, in both cases, you are relying purely on Anki\'s sandbox to protect your machine and information from the malicious code. If the Anki sandbox works, card contents could be leaked (a minor confidential issue). If the sandbox fails, there is much more to worry about (actions being taken on your machine such as stealing credentials and sensitive information, or ransomware taking over your computer). ': ' Kenkėjiškas žodynas, kuriame yra kenkėjiškas CSS, gali bandyti vykdyti Javascript. Pavyzdžiui, jei Wanchan API išvestis naudojama Anki, tuomet gauta Anki kortelė gali vykdyti nenumatytą Javascript. Rizika šiuo atveju yra panaši į kenkėjiškos Anki kaladės atsisiuntimą. Būtent abiem atvejais jūs pasikliaujate vien tik Anki smėlio dėže, kad apsaugotumėte savo mašiną ir informaciją nuo kenkėjiško kodo. Jei Anki smėlio dėžė veikia, kortelės turinys gali nutekėti (nedidelė konfidencialumo problema). Jei smėlio dėžė neveikia, yra daug daugiau nerimo (veiksmai, atliekami jūsų mašinoje, tokie kaip kredencialų ir jautrios informacijos vagystė, arba išpirkos reikalaujanti programinė įranga užvaldanti jūsų kompiuterį). ',
         'A menu option to log debugging information will be shown in the search results.': 'Meniu parinktis registruoti derinimo informaciją bus rodoma paieškos rezultatuose.',
         'API key': 'API raktas',
@@ -530,7 +530,7 @@
         'PNG': 'PNG',
         ' Parse sentences using ': ' Analizuoti sakinius naudojant ',
         "Parse sentences using Yomitan\'s internal parser": 'Sakinio analizė naudojant Wanchan vidinį parserį',
-        'Pass a secret value to AnkiConnect API calls. ': 'Perduoti slaptą vertę AnkiConnect API kvietimams. ',
+        'Pass a secret value to AnkiConnect API calls. ': 'Perduoti slaptą reikšmę AnkiConnect API užklausas. ',
         "Percentage of the popup\'s height scrolled per step.": 'Procentinė iššokančiojo lango aukščio dalis, slenkama per žingsnį.',
         ' Pitch accent display styles ': ' Tono kirčio rodymo stiliai ',
         ' Pitch accents for terms and expressions can be shown if a dictionary supporting pitch accents is installed. There are currently three different ways that pitch accents can be presented: ': ' Tono kirčiai terminams ir išsireiškimams gali būti rodomi, jei įdiegtas žodynas, palaikantis tono kirčius. Šiuo metu yra trys skirtingi būdai, kaip gali būti pateikiami tono kirčiai: ',
@@ -637,9 +637,9 @@
         ' This option may send search query data outside of Yomitan for parsing': ' Ši parinktis gali siųsti paieškos užklausos duomenis už Wanchan ribų analizei',
         ' This option may send term, reading, and/or language outside of Yomitan to fetch audio': ' Ši parinktis gali siųsti terminą, skaitymą ir/arba kalbą už Wanchan ribų garso gavimui',
         ' This page is taking longer than expected to load. ': ' Šio puslapio įkėlimas užtrunka ilgiau nei tikėtasi. ',
-        ' This setting does not have any effect in Firefox, as it does not implement the ': ' Šis nustatymas neturi jokio poveikio Firefox, nes ji neįgyvendina ',
+        ' This setting does not have any effect in Firefox, as it does not implement the ': ' Šis nustatymas neturi jokio poveikio „Firefox“ naršyklei, nes joje iki šiol nepalaikoma ',
         ' This will likely cause scanning and lookup to be slower, and the results may not be as relevant. ': ' Tai greičiausiai sukels lėtesnį skenavimą ir paiešką, o rezultatai gali būti ne tokie aktualūs. ',
-        ' To activate the Yomitan API, a native messaging component must be installed. A setup guide can be found ': ' Norint suaktyvinti Wanchan API, turi būti įdiegtas vietinis pranešimų komponentas. Sąrankos vadovą galima rasti ',
+        ' To activate the Yomitan API, a native messaging component must be installed. A setup guide can be found ': ' Norint suaktyvinti Wanchan API, turi būti įdiegtas vietinis pranešimų komponentas. Sąrankos vadovą galima rasti „yomitan-api“ „GitHub“ puslapyje - spausti ',
         'Top': 'Viršus',
         'Top position': 'Viršutinė pozicija',
         'Translation': 'Vertimas',
@@ -697,7 +697,7 @@
         'dom.storageManager.enabled': 'dom.storageManager.enabled',
         ' element will be assigned by directly changing the location of the ': ' elementas bus priskirtas tiesiogiai keičiant vietą ',
         ' element will be embeded inside of a container with a closed ': ' elementas bus įterptas į konteinerį su uždarytu ',
-        ' element will open a new popup inside of that frame, which can sometimes be limiting due to the frame\'s size. When this option is enabled, the popup will be created in the root of the page, if possible. ': ' elementas atidarys naują iššokantįjį langą tame rėmelyje, kas kartais gali būti ribojama dėl rėmelio dydžio. Kai ši parinktis įgalinta, iššokantis langas bus sukurtas puslapio šaknyje, jei įmanoma. ',
+        ' element will open a new popup inside of that frame, which can sometimes be limiting due to the frame\'s size. When this option is enabled, the popup will be created in the root of the page, if possible. ': ', elementas atidarys naują iššokantįjį langą tame rėmelyje, kas kartais gali būti ribojama dėl rėmelio dydžio. Kai ši parinktis įgalinta, iššokantis langas bus sukurtas puslapio šaknyje, jei įmanoma. ',
         ' enabled)': ' įgalinta)',
         ' for a setup guide. ': ' sąrankos gida. ',
         ' for details. ': ' detalėms. ',
@@ -718,7 +718,7 @@
         ' of ': ' iš ',
         ' on browser startup': ' naršyklės paleidimo metu',
         ' option and clicking ': ' parinktį ir spustelėjus ',
-        ' option can be used to scan text whenever the cursor is moved, without requiring any key to be held. ': ' parinktis gali būti naudojama tekstui skenuoti kiekvieną kartą perkėlus žymeklį, nereikalaujant laikyti jokio klavišo. ',
+        ' option can be used to scan text whenever the cursor is moved, without requiring any key to be held. ': '" parinktis gali būti naudojama tekstui skenuoti kiekvieną kartą perkėlus žymeklį, nereikalaujant laikyti jokio klavišo. ',
         ' option is incorrect. Resetting it to the default value may fix issues that are occurring. ': ' parinktis neteisinga. Atstatymas į numatytąją reikšmę gali išspręsti kylančias problemas. ',
         ' option should be assigned to a dictionary which contains related term information, and configuring the ': ' parinktis turėtų būti priskirta žodynui, kuriame yra susijusi termino informacija, ir konfigūruojant ',
         ' option will additionally check for duplicates in all child decks of the root deck. This allows adding cards that are unique for decks including a subdeck structure. For decks which don\'t have any parent-child hierarchy, both options function the same. ': ' parinktis papildomai tikrins dublikatus visose šakninės kaladės antrinėse kaladėse. Tai leidžia pridėti korteles, kurios yra unikalios kaladėms, įskaitant subkaladžių struktūrą. ',
@@ -981,7 +981,7 @@
         'Same as': 'Tas pats kaip',
         ', but with entries from only a single dictionary.': ', bet su įrašais tik iš vieno žodyno.',
         'The dictionary name will likely be modified, use the options from the ▼ dropdown.': 'Žodyno pavadinimas greičiausiai bus pakeistas, naudokite parinktis iš ▼ išskleidžiamojo sąrašo.',
-        'for kanji cards.': 'kanji kortelėms.',
+        'for kanji cards.': ' kanji kortelėms.',
 
         // Anki Templates Modal
         'Anki Card Templates': 'Anki kortelių šablonai',
@@ -1004,9 +1004,9 @@
         // Anki Note Generator
         'Anki Note Generator': 'Anki užrašų generatorius',
         'WARNING: This feature is experimental!': 'ĮSPĖJIMAS: Ši funkcija yra eksperimentinė!',
-        'Notes in plain text (.txt)': 'Užrašai paprastu tekstu (.txt)',
+        'Notes in plain text (.txt)': 'Užrašai paprastu tekstu (.txt) ',
         'format.': 'formatu.',
-        'For more information check the': 'Daugiau informacijos rasite',
+        'For more information check the': 'Daugiau informacijos rasite ',
         'documentation': 'dokumentacijoje',
         'Active Anki Flashcard Format:': 'Aktyvus Anki kortelių formatas:',
         'Active Anki deck:': 'Aktyvi Anki kaladė:',
@@ -1048,8 +1048,8 @@
 
         // Text Replacement
         'Custom Text Replacement Patterns': 'Pasirinktiniai teksto pakeitimo šablonai',
-        'regular expression syntax': 'reguliariųjų išraiškų sintaksė',
-        'special replacement patterns': 'specialūs pakeitimo šablonai',
+        'regular expression syntax': ' reguliariųjų išraiškų sintaksė ',
+        'special replacement patterns': ' specialūs pakeitimo šablonai ',
         'Search original text': 'Ieškoti originaliame tekste',
         'The original unmodified text will also be searched for definitions.': 'Originalus nepakeistas tekstas taip pat bus ieškomas apibrėžimų.',
         'Text replacement patterns': 'Teksto pakeitimo šablonai',
@@ -1077,8 +1077,8 @@
         'chrome://extensions/shortcuts': 'chrome://extensions/shortcuts',
         'edge://extensions/shortcuts': 'edge://extensions/shortcuts',
         'in a new tab.': 'naujame skirtuke.',
-        'Find the': 'Suraskite',
-        'section and configure the shortcuts.': 'sekciją ir sukonfigūruokite sparčiuosius klavišus.',
+        'Find the': 'Suraskite ',
+        'section and configure the shortcuts.': ' sekciją ir sukonfigūruokite sparčiuosius klavišus.',
         'Open the extensions page (': 'Atidarykite plėtinių puslapį (',
         ')': ')',
         'Click the button on the right with the gear icon, then click': 'Spustelėkite mygtuką dešinėje su krumpliaračio piktograma, tada spustelėkite',
@@ -1276,12 +1276,12 @@
         'button below to select a dictionary file to import.': ' mygtuką žemiau, kad pasirinktumėte žodyno failą importui.',
 
         // Scanning inputs modal
-        'Required inputs': 'Būtinos įvestys',
+        'Required inputs': ' Būtinos įvestys ',
         'Excluded inputs': 'Išskirtos įvestys',
         'Input types': 'Įvesties tipai',
         'must': 'turi',
         'must not': 'neturi',
-        'field is used to define which inputs': 'laukas naudojamas apibrėžti, kurios įvestys',
+        'field is used to define which inputs': ' laukas naudojamas apibrėžti, kurios įvestys ',
         'be pressed, and': 'būti paspaustos, ir',
         'be pressed.': 'būti paspaustos.',
         'Show advanced options': 'Rodyti išplėstines parinktis',
@@ -1289,7 +1289,7 @@
         'Escape': 'Escape',
         'button,': 'mygtuką,',
         'or use the': 'arba naudokite',
-        'menu option.': 'meniu parinktį.',
+        'menu option.': ' meniu parinktį.',
 
         // Punctuation - keep as-is
         ' (': ' (',
@@ -1338,7 +1338,7 @@
         'search page': 'paieškos puslapyje',
         'this link': 'ši nuoroda',
         'this schema file': 'ši schemos byla',
-        'Handlebars.js': 'Handlebars.js',
+        'Handlebars.js': ' Handlebars.js ',
         'shadow DOM': 'šešėlinis DOM',
         'supported browsers': 'palaikomos naršyklės',
         ' plugin. ': ' papildinį. ',
@@ -1526,14 +1526,14 @@
         'No conditions set up.': 'Nenustatytos jokios sąlygos.',
 
         // Collapsible dictionaries
-        'Dictionary definitions can be collapsed if they exceed a certain line count, which may be useful for dictionaries with long definitions. The appearance can be customized using custom CSS.': 'Žodyno apibrėžimai gali būti sutraukti, jei jie viršija tam tikrą eilučių skaičių, kas gali būti naudinga žodynams su ilgais apibrėžimais. Išvaizdą galima pritaikyti naudojant pasirinktinį CSS.',
+        'Dictionary definitions can be collapsed if they exceed a certain line count, which may be useful for dictionaries with long definitions. The appearance can be customized using custom CSS.': 'Žodyno apibrėžimai gali būti sutraukti, jei jie viršija tam tikrą eilučių skaičių, kas gali būti naudinga žodynams su ilgais apibrėžimais. Išvaizdą galima pritaikyti naudojant pasirinktinį CSS. ',
         'Dictionary definitions can be collapsed if they exceed a certain line count, which may be useful for dictionaries with long definitions. There are five different modes:': 'Žodyno apibrėžimai gali būti sutraukti, jei jie viršija tam tikrą eilučių skaičių, kas gali būti naudinga žodynams su ilgais apibrėžimais. Yra penki skirtingi režimai:',
         '- Definitions will not be collapsed.': '- Apibrėžimai nebus sutraukiami.',
         '- Definitions will show a collapse button if their size exceeds the max height, and they will be collapsed by default.': '- Apibrėžimai rodys sutraukimo mygtuką, jei jų dydis viršija maksimalų aukštį, ir jie bus sutraukti pagal nutylėjimą.',
         '- Definitions will show a collapse button if their size exceeds the max height, and they will be expanded by default.': '- Apibrėžimai rodys sutraukimo mygtuką, jei jų dydis viršija maksimalų aukštį, ir jie bus išplėsti pagal nutylėjimą.',
         '- Definitions will always show a collapse button, and they will be collapsed by default.': '- Apibrėžimai visada rodys sutraukimo mygtuką, ir jie bus sutraukti pagal nutylėjimą.',
         '- Definitions will always show a collapse button, and they will be expanded by default.': '- Apibrėžimai visada rodys sutraukimo mygtuką, ir jie bus išplėsti pagal nutylėjimą.',
-        'By default, the number of lines shown for a definition is 3. This can be configured by adjusting the': 'Pagal nutylėjimą, apibrėžimui rodomų eilučių skaičius yra 3. Tai galima konfigūruoti koreguojant',
+        'By default, the number of lines shown for a definition is 3. This can be configured by adjusting the': 'Pagal nutylėjimą, apibrėžimui rodomų eilučių skaičius yra 27 terminams ir 10 kandži. Tai galima konfigūruoti koreguojant ',
         '; the value can be a unitless integer or decimal number.': '; reikšmė gali būti sveikasis arba dešimtainis skaičius be matavimo vienetų.',
         '/* Globally set the line count */ :root { --collapsible-definition-line-count: 2; } :root { --collapsible-kanji-glyph-data-line-count: 2; } /* Set the line count for a specific dictionary */ .definition-item[data-dictionary=\'JMdict\'] { --collapsible-definition-line-count: 2; } .kanji-entry[data-dictionary=\'KANJIDIC\'] { --collapsible-kanji-glyph-data-line-count: 2; } /* Spoiler-like functionality, use with': '/* Globaliai nustatyti eilučių skaičių */ :root { --collapsible-definition-line-count: 2; } :root { --collapsible-kanji-glyph-data-line-count: 2; } /* Nustatyti eilučių skaičių konkrečiam žodynui */ .definition-item[data-dictionary=\'JMdict\'] { --collapsible-definition-line-count: 2; } .kanji-entry[data-dictionary=\'KANJIDIC\'] { --collapsible-kanji-glyph-data-line-count: 2; } /* Spoilerio tipo funkcionalumas, naudoti su',
         'mode */ .definition-item[data-dictionary=\'JMdict\'] .definition-item-inner.collapsible.collapsed { color: #000000; background-color: #000000; } .kanji-entry[data-dictionary=\'KANJIDIC\'] .kanji-glyph-data.collapsible.collapsed { color: #000000; background-color: #000000; }': 'režimu */ .definition-item[data-dictionary=\'JMdict\'] .definition-item-inner.collapsible.collapsed { color: #000000; background-color: #000000; } .kanji-entry[data-dictionary=\'KANJIDIC\'] .kanji-glyph-data.collapsible.collapsed { color: #000000; background-color: #000000; }',
@@ -1546,26 +1546,26 @@
 
         // Scanning inputs
         'Scanning inputs are used to define when text scanning should occur.': 'Skenavimo įvestys naudojamos apibrėžti, kada turėtų vykti teksto skenavimas.',
-        'Text scanning is performed when a pointer is moved and certain inputs are either pressed or not pressed. The': 'Teksto skenavimas atliekamas, kai žymeklis judinamas ir tam tikros įvestys yra paspaustos arba nepaspaustos.',
-        'be pressed, and the': 'būti paspaustos, ir',
-        'be pressed. If the': 'būti paspaustos. Jei',
+        'Text scanning is performed when a pointer is moved and certain inputs are either pressed or not pressed. The': 'Teksto skenavimas atliekamas, kai žymeklis judinamas ir tam tikros įvestys yra paspaustos arba nepaspaustos. ',
+        'be pressed, and the': ' būti paspaustos, ir ',
+        'be pressed. If the': ' būti paspaustos. Jei ',
         'field is empty, text will be scanned whenever the pointer is moved.': 'laukas tuščias, tekstas bus skenuojamas kiekvieną kartą pajudinus žymeklį.',
-        'group is used to define which types of pointer input that the keyboard and button inputs are applied to. Supported pointer types include the mouse cursor, touchscreen touches, and pen devices. When using the': 'grupė naudojama apibrėžti, kokio tipo žymeklio įvestims taikomi klaviatūros ir mygtukų įvestys. Palaikomi žymeklių tipai apima pelės žymeklį, jutiklinio ekrano lietimus ir rašiklio įrenginius. Naudojant',
-        'option, the defined inputs will correspond to buttons on the pen device.': 'parinktį, apibrėžtos įvestys atitiks rašiklio įrenginio mygtukus.',
-        'Some additional scanning and search options can be configured by clicking the menu button and selecting': 'Kai kurias papildomas skenavimo ir paieškos parinktis galima konfigūruoti spustelėjus meniu mygtuką ir pasirinkus',
+        'group is used to define which types of pointer input that the keyboard and button inputs are applied to. Supported pointer types include the mouse cursor, touchscreen touches, and pen devices. When using the': ' grupė naudojama apibrėžti, kokio tipo žymeklio įvestims taikomi klaviatūros ir mygtukų įvestys. Palaikomi žymeklių tipai apima pelės žymeklį, jutiklinio ekrano lietimus ir rašiklio įrenginius. Naudojant ',
+        'option, the defined inputs will correspond to buttons on the pen device.': ' parinktį, apibrėžtos įvestys atitiks rašiklio įrenginio mygtukus.',
+        'Some additional scanning and search options can be configured by clicking the menu button and selecting': 'Kai kurias papildomas skenavimo ir paieškos parinktis galima konfigūruoti spustelėjus meniu mygtuką ir pasirinkus ',
         'To assign keyboard keys, select the input field and press modifier keys on the keyboard.': 'Norėdami priskirti klaviatūros klavišus, pasirinkite įvesties lauką ir paspauskite modifikavimo klavišus klaviatūroje.',
         'To assign mouse or pen buttons, click on the button with the mouse icon using the desired button.': 'Norėdami priskirti pelės ar rašiklio mygtukus, spustelėkite mygtuką su pelės piktograma naudodami norimą mygtuką.',
-        'To clear inputs, select the input field and press the': 'Norėdami išvalyti įvestis, pasirinkite įvesties lauką ir paspauskite',
-        'button, or use the': 'mygtuką, arba naudokite',
+        'To clear inputs, select the input field and press the': 'Norėdami išvalyti įvestis, pasirinkite įvesties lauką ir paspauskite ',
+        'button, or use the': ' mygtuką, arba naudokite ',
         'No scanning inputs have been defined yet. Click the': 'Dar nenustatytos jokios skenavimo įvestys. Spustelėkite',
         'button to add a new input.': 'mygtuką, kad pridėtumėte naują įvestį.',
         'Prevent secondary mouse button actions on:': 'Uždrausti antrinius pelės mygtuko veiksmus:',
         'This option is used to disable the default action of the secondary mouse buttons in different contexts. This can be useful for preventing actions that the middle button and buttons 4 and 5 are typically mapped to (scrolling and back/forward, respectively), which are otherwise difficult to disable inside extension pages via other means.': 'Ši parinktis naudojama išjungti numatytuosius antrinių pelės mygtukų veiksmus skirtinguose kontekstuose. Tai gali būti naudinga norint uždrausti veiksmus, kuriems paprastai priskirti vidurinys mygtukas ir mygtukai 4 bei 5 (atitinkamai slinkimas ir atgal/pirmyn), kuriuos kitaip sunku išjungti plėtinio puslapiuose kitomis priemonėmis.',
 
         // Anki card fields
-        'Anki card fields can be populated with information about a term or kanji character by using field markers. When a card is being generated, field markers are replaced with information about the term or kanji by using the installed dictionaries. Several preset markers are available, which are described below. Markers can be customized by adjusting the': 'Anki kortelės laukai gali būti užpildyti informacija apie terminą ar kanji simbolį naudojant laukų žymeklius. Kai generuojama kortelė, laukų žymekliai pakeičiami informacija apie terminą ar kanji naudojant įdiegtus žodynus. Galimi keli iš anksto nustatyti žymekliai, aprašyti žemiau. Žymeklius galima pritaikyti koreguojant',
-        'Anki requires the first field in a model to be unique for a card; therefore, it is recommended to use': 'Anki reikalauja, kad pirmasis modelio laukas būtų unikalus kortelei; todėl rekomenduojama naudoti',
-        'as the marker for the first field of term cards, or': 'kaip žymeklį pirmajam terminų kortelių laukui, arba',
+        'Anki card fields can be populated with information about a term or kanji character by using field markers. When a card is being generated, field markers are replaced with information about the term or kanji by using the installed dictionaries. Several preset markers are available, which are described below. Markers can be customized by adjusting the': 'Anki kortelės laukai gali būti užpildyti informacija apie terminą ar kanji simbolį naudojant laukų žymeklius. Kai generuojama kortelė, laukų žymekliai pakeičiami informacija apie terminą ar kanji naudojant įdiegtus žodynus. Galimi keli iš anksto nustatyti žymekliai, aprašyti žemiau. Žymeklius galima pritaikyti koreguojant ',
+        'Anki requires the first field in a model to be unique for a card; therefore, it is recommended to use': 'Anki reikalauja, kad pirmasis modelio laukas būtų unikalus kortelei; todėl rekomenduojama naudoti ',
+        'as the marker for the first field of term cards, or': ' kaip žymeklį pirmajam terminų kortelių laukui, arba ',
         'Term expressed as kanji with furigana displayed above it. Example:': 'Terminas, išreikštas kanji su furigana, rodoma virš jo. Pavyzdys:',
         'Term expressed as kanji with furigana displayed next to it in brackets. Example: 日本語[にほんご].': 'Terminas, išreikštas kanji su furigana, rodoma šalia skliausteliuose. Pavyzdys: 日本語[にほんご].',
         '{single-glossary-DICT-NAME}': '{single-glossary-DICT-NAME}',
@@ -1579,7 +1579,7 @@
         'Anki card fields are formatted using the': 'Anki kortelės laukai formatuojami naudojant',
         'template rendering engine. Advanced users can modify these templates for full control over what information is included in Anki cards.': 'šablonų atvaizdavimo variklį. Pažengę vartotojai gali modifikuoti šiuos šablonus, kad visiškai kontroliuotų, kokia informacija įtraukiama į Anki korteles.',
         'Are you sure you want to reset the card templates to their default value? Any changes you made will be lost.': 'Ar tikrai norite atstatyti kortelių šablonus į jų numatytąsias reikšmes? Visi jūsų padaryti pakeitimai bus prarasti.',
-        'Enter a newline separated list of terms below to send notes directly to an Anki deck or export to an Anki deck file in': 'Įveskite naujomis eilutėmis atskirtą terminų sąrašą žemiau, kad siųstumėte užrašus tiesiai į Anki kaladę arba eksportuotumėte į Anki kaladės failą',
+        'Enter a newline separated list of terms below to send notes directly to an Anki deck or export to an Anki deck file in': 'Įveskite naujomis eilutėmis atskirtą terminų sąrašą žemiau, kad siųstumėte užrašus tiesiai į Anki kaladę arba eksportuotumėte į Anki kaladės failą ',
 
         // Settings import/export
         'Settings file contains settings which may pose a security risk. Only import settings from sources you trust.': 'Nustatymų failas turi nustatymus, kurie gali kelti saugumo riziką. Importuokite nustatymus tik iš šaltinių, kuriais pasitikite.',
@@ -1674,32 +1674,32 @@
     const REGEX_TRANSLATIONS = [
         {
             regex: /^Importing dictionary \((\d+) of (\d+)\) - Step (\d+) of (\d+): (.*)\.\.\.$/,
-            replace: (match, p1, p2, p3, p4, p5) => `Importuojamas žodynas (${p1} iš ${p2}) - Žingsnis ${p3} iš ${p4}: ${translateText(p5)}...`
+            replace: (match, p1, p2, p3, p4, p5) => `Importuojamas žodynas (${p1} iš ${p2}) - Žingsnis ${p3} iš ${p4}: ${translateText(p5)}...`,
         },
         {
             regex: /^Importing dictionary - Step (\d+) of (\d+): (.*)\.\.\.$/,
-            replace: (match, p1, p2, p3) => `Importuojamas žodynas - Žingsnis ${p1} iš ${p2}: ${translateText(p3)}...`
+            replace: (match, p1, p2, p3) => `Importuojamas žodynas - Žingsnis ${p1} iš ${p2}: ${translateText(p3)}...`,
         },
         {
             regex: /^Failed to fetch blob from (.*)$/,
-            replace: 'Nepavyko gauti blob iš $1'
+            replace: 'Nepavyko gauti blob iš $1',
         },
         {
             regex: /^Failed to fetch the URL: (.*)$/,
-            replace: 'Nepavyko gauti URL: $1'
+            replace: 'Nepavyko gauti URL: $1',
         },
         {
             regex: /^Error fetching URL: (.*)$/,
-            replace: 'Klaida gaunant URL: $1'
+            replace: 'Klaida gaunant URL: $1',
         },
         {
             regex: /^Failed to read file (\d+) of (\d+)\.$/,
-            replace: 'Nepavyko nuskaityti failo $1 iš $2.'
+            replace: 'Nepavyko nuskaityti failo $1 iš $2.',
         },
         {
             regex: /^Dictionary may not have been imported properly: (\d+) error(s?) reported\.$/,
-            replace: (match, p1, p2) => `Žodynas galėjo būti importuotas netinkamai: pranešta apie ${p1} klaid${p2 ? 'as' : 'ą'}.`
-        }
+            replace: (match, p1, p2) => `Žodynas galėjo būti importuotas netinkamai: pranešta apie ${p1} klaid${p2 ? 'as' : 'ą'}.`,
+        },
     ];
 
     /**
@@ -1734,9 +1734,7 @@
         }
 
         // 4. Rebranding Fallback
-        const rebranded = rebrandYomitan(text);
-
-        return rebranded;
+        return rebrandYomitan(text);
     }
 
     /**
@@ -1815,11 +1813,9 @@
      */
     function init() {
         if (TARGET_LANG !== 'lt') {
-            console.log('Wanchan Localization: Disabled (Language not set to lt)');
             return;
         }
 
-        console.log('Wanchan Localization Engine Starting (LT)...');
 
         // Initial Translation
         traverseAndTranslate(document.body);

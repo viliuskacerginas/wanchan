@@ -144,7 +144,6 @@ function extractStringsFromFile(filePath) {
  *
  */
 function main() {
-    console.log(`Scanning directory: ${SOURCE_DIR}`);
     const htmlFiles = getAllFiles(SOURCE_DIR, '.html');
 
     const output = {};
@@ -152,7 +151,6 @@ function main() {
 
     for (const file of htmlFiles) {
         const relativePath = path.relative(SOURCE_DIR, file).replace(/\\/g, '/'); // Normalize path for JSON keys
-        console.log(`Processing: ${relativePath}`);
 
         const strings = extractStringsFromFile(file);
 
@@ -171,11 +169,6 @@ function main() {
 
     const jsonContent = JSON.stringify(output, null, 4);
     fs.writeFileSync(OUTPUT_FILE, jsonContent, 'utf8');
-
-    console.log('\nExtraction complete!');
-    console.log(`- Files scanned: ${htmlFiles.length}`);
-    console.log(`- Unique strings found: ${totalStrings}`);
-    console.log(`- Output written to: ${OUTPUT_FILE}`);
 }
 
 main();
