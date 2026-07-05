@@ -471,7 +471,7 @@
         'Import Dictionary Collection': 'Importuoti žodynų kolekciją',
         'Import Settings': 'Importuoti nustatymus',
         ' Importing dictionaries may fail. ': ' Importuojant žodynus gali nepavykti. ',
-        ' In order for Yomitan to use it, both MeCab and a native messaging component must be installed. A setup guide can be found ': ' Kad Wanchan galėtų jį naudoti, turi būti įdiegti tiek MeCab, tiek vietinis pranešimų komponentas. Sąrankos vadovą galima rasti ',
+        ' In order for Yomitan to use it, both MeCab and a native messaging component must be installed. A setup guide can be found ': ' Kad Wanchan galėtų jį naudoti, turi būti įdiegti tiek MeCab, tiek vietinis pranešimų komponentas. Sąrankos vadovą galite rasti "Yomitan MeCab Installer github" puslapyje, spausti - ',
         'Info…': 'Informacija...',
         'Inline list': 'Sąrašas eilutėje',
         ' Instead of showing definitions in a popup embedded into the webpage, a native browser window containing the popup content will be opened instead. This window will be shared across all tabs. ': ' Vietoj apibrėžimų rodymo iššokančiame lange, įterptame į tinklalapį, bus atidarytas vietinis naršyklės langas su iššokančiojo lango turiniu. Šis langas bus bendrinamas visose kortelėse. ',
