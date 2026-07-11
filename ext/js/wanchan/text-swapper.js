@@ -865,6 +865,7 @@
         'Add Reverse': 'Pridėti atvirkštinę',
         'Sentence': 'Sakinys',
         'Sentence No word': 'Sakinys be žodžio',
+        'Sentence no word': 'Sakinys be žodžio',
         'Original inflected term as it appeared before being reduced to dictionary form by Yomitan.': 'Originalus linksniuojamas terminas, koks jis pasirodė prieš Wanchan jį paverčiant žodyno forma.',
         'Original inflected term as it appeared before being reduced to dictionary form by Wanchan.': 'Originalus linksniuojamas terminas, koks jis pasirodė prieš Wanchan jį paverčiant žodyno forma.',
 
