@@ -2,8 +2,8 @@
     "manifest": {
         "manifest_version": 3,
         "name": "Wanchan Iššokantis Žodynas",
-        "version": "1.0.0.0",
-        "description": "Iššokantis žodynas kalbų mokymuisi",
+        "version": "1.0.1.0",
+        "description": "Nnemokamas naršyklės plėtinys. Užveskite pelę ant bet kurio japoniško teksto ir akimirksniu gaukite vertimus, apibrėžimus bei Anki integraciją.",
         "author": {
             "email": "vilius.kacerginas@gmail.com"
         },

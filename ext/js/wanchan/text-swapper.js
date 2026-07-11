@@ -42,6 +42,7 @@
         'Profile': 'Profilis',
         'Search Shift+click to open here': 'Paieška Shift+paspaudimas atidaryti čia',
         'Settings': 'Nustatymai',
+        'Yomitan homepage': ' Wanchan ',
         'Yomitan Action Popup': 'Wanchan Veiksmų Langas',
         'Hold ': 'Laikykite ',
         ' to scan': ' kad nuskenuotumėte',
@@ -68,7 +69,7 @@
         'GitHub': 'GitHub',
         'GitHub Issues': 'GitHub Problemos',
         'Homepage': 'Pagrindinis puslapis',
-        'Information and user guide: ': 'Informacija ir vartotojo gidas: ',
+        'Information and user guide: ': 'Informacija ir anki gidas: ',
         'Installed dictionaries: ': 'Įdiegti žodynai: ',
         'Issues': 'Problemos',
         'Language: ': 'Kalba: ',
@@ -79,7 +80,7 @@
         'None installed': 'Nieko neįdiegta',
         'Permissions': 'Leidimai',
         'Platform: ': 'Platforma: ',
-        'Read the wiki': 'Skaityti wiki',
+        'Read the wiki': 'Wanchan pagrindinis puslapis',
         'Recommended dictionaries: ': 'Rekomenduojami žodynai: ',
         'Download': 'Atsisiųsti',
         'Release notes: ': 'Išleidimo pastabos: ',
@@ -228,7 +229,7 @@
         ' If you are using or planning to use custom templates for Anki note creation, note that ': ' Jei naudojate arba planuojate naudoti pasirinktinius šablonus Anki užrašų kūrimui, atkreipkite dėmesį, kad ',
         'Installing Dictionaries': 'Žodynų Diegimas',
         'Migrating to Yomitan': 'Migravimas į Wanchan',
-        'New to Yomitan? Head to Yomitan Wiki!': 'Naujokas Wanchan? Eikite į Wanchan Wiki!',
+        'New to Yomitan? Head to Yomitan Wiki!': 'Naujokas? Daugiau informacijos rasite čia!',
         ' Please ensure that your custom templates are using the updated syntax. ': ' Įsitikinkite, kad jūsų pasirinktiniai šablonai naudoja atnaujintą sintaksę. ',
         'Quick Actions': 'Greiti Veiksmai',
         'Quick Start Guide': 'Greitos Pradžios Gidas',
@@ -239,7 +240,6 @@
         ' To get started, first select your desired language in the ': ' Norėdami pradėti, ',
         'Yomitan': 'Wanchan',
         'Yomitan Quick Start Guide': 'Wanchan Greitos Pradžios Gidas',
-        'Yomitan Wiki': 'Yomitan Wiki',
         ' Yomitan requires one or more dictionaries to be installed in order to look up terms, kanji, and other information. ': ' Wanchan reikalauja įdiegti vieną ar daugiau žodynų, kad būtų galima ieškoti terminų, kandži ir kitos informacijos. ',
         ' You can also import an exported collection of dictionaries from the ': ' Taip pat galite importuoti eksportuotą žodynų kolekciją iš ',
         'browser-action-popup': 'naršyklės veiksmo iššokantis langas',
@@ -255,11 +255,11 @@
         ' page. Then, click on ': ' puslapyje spustelėkite ',
         'question mark': 'klaustuko',
         'scanning': 'skenavimas',
-        ' section to find dictionaries for your language. You can also visit ': ' skyriuje. ',
+        ' section to find dictionaries for your language. You can also visit ': ' skyriuje. Taip pat galite spausti - ',
         'settings-dictionaries-popup': 'nustatymai-žodynai-iššokantis-langas',
         'some syntax has changed from Yomichan and Yomibaba.': 'kai kuri sintaksė pasikeitė nuo Yomichan ir Yomibaba.',
         'speaker': 'garsiakalbio',
-        ' to learn more about Yomitan dictionaries. Once downloaded, dictionaries can be configured and managed from the same ': ' Atsisiuntus, žodynus galima konfigūruoti ir valdyti tam pačiam ',
+        ' to learn more about Yomitan dictionaries. Once downloaded, dictionaries can be configured and managed from the same ': ', atsisiuntus, žodynus galima konfigūruoti ir valdyti tam pačiam ',
         ' under the ': ' po ',
 
         // --- ext/search.html ---
@@ -676,7 +676,8 @@
         ' Yomitan is using an indeterminate amount of storage. ': ' Wanchan naudoja neapibrėžtą saugyklos kiekį. ',
         ' Yomitan is using approximately ': ' Wanchan naudoja maždaug ',
         ' Yomitan supports automatic flashcard creation for ': ' Wanchan palaiko automatinį kortelių kūrimą ',
-        'Yomitan wiki': 'Yomitan wiki',
+        'Yomitan wiki': '▶',
+        'Yomitan Wiki': '▶',
         ' Yomitan\'s internal parser is a simple algorithm which can parse sentences using the installed dictionaries. It works by repeatedly detecting the longest term at the start of the sentence and advancing until no text remains. This provides decent results for the general case, but since grammatical structure is not taken into account, it can sometimes yield incorrect segmentation. ': ' Wanchan vidinis parseris yra paprastas algoritmas, kuris gali analizuoti sakinius naudojant įdiegtus žodynus. Jis veikia pakartotinai aptikdamas ilgiausią terminą sakinio pradžioje ir judėdamas į priekį, kol nelieka teksto. Tai suteikia padorius rezultatus bendru atveju, tačiau kadangi gramatinė struktūra nėra vertinama, kartais tai gali lemti neteisingą segmentaciją. ',
         'You can customize overwriting for each field in the ': 'Galite pritaikyti perrašymą kiekvienam laukui ',
         ' You can input things such as ': ' Galite įvesti tokius dalykus kaip ',
@@ -788,7 +789,7 @@
 
         // ext/support.html
         'Contribute to the Yomitan project! Start by reading our ': 'Prisidėkite prie Wanchan projekto! Pradėkite nuo mūsų ',
-        'Contribution Guidelines': 'Prisidėjimo gairių',
+        'Contribution Guidelines': 'Prisidėjimas',
         'Here are some ways to support Yomitan:': 'Štai keletas būdų palaikyti Wanchan:',
         'Leave us a review on the Firefox/Chrome/Edge store! ': 'Palikite mums atsiliepimą Firefox/Chrome/Edge parduotuvėje! ',
         'Report any bugs or feedback on our ': 'Praneškite apie klaidas ar atsiliepimus mūsų ',
@@ -1083,7 +1084,7 @@
         'Open the extensions page (': 'Atidarykite plėtinių puslapį (',
         ')': ')',
         'Click the button on the right with the gear icon, then click': 'Spustelėkite mygtuką dešinėje su krumpliaračio piktograma, tada spustelėkite',
-        'Manage Extension Shortcuts': 'Tvarkyti plėtinio sparčiuosius klavišus',
+        'Manage Extension Shortcuts': ' Tvarkyti plėtinio sparčiuosius klavišus',
         'Reset All': 'Atstatyti viską',
         'Clear All': 'Išvalyti viską',
         'Confirm Keyboard Shortcuts Reset': 'Patvirtinti klaviatūros sparčiųjų klavišų atstatymą',
@@ -1092,8 +1093,12 @@
         // Data Transmission
         'Data Transmission Consent': 'Duomenų perdavimo sutikimas',
         'To comply with': 'Kad atitiktų',
-        'Firefox Add-On Policies': 'Firefox priedų politiką',
-        'This request may contain the term, reading, and/or language for the given dictionary entry term.': 'Ši užklausa gali turėti terminą, skaitymą ir/arba kalbą duotam žodyno įrašo terminui.',
+        'Firefox Add-On Policies': ' Firefox priedų politiką',
+        ', Wanchan is required to get your verification that you are comfortable with any default data transmission the extension does.': ', Wanchan privalo gauti jūsų patvirtinimą, kad sutinkate su bet kokiu numatytuoju duomenų perdavimu, kurį atlieka plėtinys.',
+        'This request may contain the term, reading, and/or language for the given dictionary entry term.': 'Ši užklausa gali turėti terminą, skaitymą ir/arba kalbą duotam žodyno įrašo terminui. ',
+        'Wanchan does very little data transmission, as Wanchan data is stored locally on your device. Wanchan does not sell or externally collect any user data.': 'Wanchan atlieka labai mažai duomenų perdavimo, nes Wanchan duomenys yra saugomi lokaliai jūsų įrenginyje. „Wanchan“ neparduoda ir išoriškai nerenka jokių naudotojo duomenų.',
+        'The only place data transmission is done by default is when the audio icon in the Wanchan popup is clicked to play the audio for a term; in this case a request will be sent to the audio provider configured in your settings.': 'Vienintelė vieta, kur duomenų perdavimas atliekamas pagal numatytuosius nustatymus, yra tada, kai iššokančiajame „Wanchan“ lange spustelėjama garso piktograma, norint paleisti termino įrašą; tokiu atveju užklausa bus išsiųsta jūsų nustatymuose sukonfigūruotam garso teikėjui.',
+        'Full details on Wanchan\'s use of data transmission are provided in the ': 'Išsami informacija apie Wanchan vykdomą duomenų perdavimą yra pateikiama Privatumo politikoje ',
         'Personally identifying information is never sent.': 'Asmenį identifikuojanti informacija niekada nesiunčiama.',
         'Decline data transmission': 'Atmesti duomenų perdavimą',
         '(disable audio playback)': '(išjungti garso atkūrimą)',
@@ -1810,6 +1815,52 @@
     }
 
     /**
+     * Replaces known href values on all anchor tags using direct DOM manipulation.
+     */
+    function replaceAnchors() {
+        const anchors = document.querySelectorAll('a[href]');
+        for (const a of anchors) {
+            const href = a.getAttribute('href');
+
+            switch (href) {
+                case 'https://github.com/yomidevs/yomitan/blob/master/CONTRIBUTING.md':
+                    a.href = 'https://github.com/viliuskacerginas/wanchan/blob/master/CONTRIBUTING.md';
+                    break;
+                case 'https://yomitan.wiki/dictionaries/':
+                    a.href = 'https://github.com/viliuskacerginas/wanchan-dict';
+                    break;
+                case 'https://github.com/yomidevs/yomitan/blob/master/docs/dictionaries.md#dictionaries':
+                    a.href = 'https://github.com/viliuskacerginas/wanchan-dict';
+                    break;
+                case 'https://yomitan.wiki':
+                    a.href = 'https://wanchan.lt/';
+                    break;
+                case 'https://github.com/yomidevs/yomitan':
+                    a.href = 'https://github.com/viliuskacerginas/wanchan';
+                    break;
+                case 'https://yomitan.wiki/privacy/':
+                    a.href = 'https://github.com/viliuskacerginas/wanchan/blob/master/PRIVACY-POLICY.md';
+                    break;
+                case 'https://github.com/yomidevs/yomitan/issues/new/choose':
+                    a.href = 'https://github.com/viliuskacerginas/wanchan/issues/new/choose';
+                    break;
+                case 'https://addons.mozilla.org/en-US/firefox/addon/yomitan/privacy/':
+                    a.href = 'https://addons.mozilla.org/en-US/firefox/addon/wanchan_iššokantis_žodynas/privacy/';
+                    break;
+                case 'addons.mozilla.org/en-US/firefox/addon/yomitan/privacy/':
+                    a.href = 'https://addons.mozilla.org/en-US/firefox/addon/wanchan_iššokantis_žodynas/privacy/';
+                    break;
+                case 'https://foosoft.net/projects/anki-connect/':
+                    a.href = 'https://ankiweb.net/shared/info/2055492159';
+                    break;
+                case 'https://yomitan.wiki/anki/':
+                    a.href = 'https://wanchan.lt/anki';
+                    break;
+            }
+        }
+    }
+
+    /**
      * Initializes the localization logic.
      */
     function init() {
@@ -1820,6 +1871,7 @@
 
         // Initial Translation
         traverseAndTranslate(document.body);
+        replaceAnchors();
         if (document.title) {
             document.title = translateText(document.title);
         }
