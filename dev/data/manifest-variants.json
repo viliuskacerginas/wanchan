@@ -3,7 +3,7 @@
         "manifest_version": 3,
         "name": "Wanchan Iššokantis Žodynas",
         "version": "1.0.1.0",
-        "description": "Nemokamas naršyklės plėtinys. Užveskite pelę ant bet kurio japoniško teksto ir akimirksniu gaukite vertimus, apibrėžimus bei Anki integraciją.",
+        "description": "Užveskite pelę ant bet kurio japoniško teksto ir akimirksniu gaukite vertimus, apibrėžimus bei Anki integraciją.",
         "author": {
             "email": "vilius.kacerginas@gmail.com"
         },
