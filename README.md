@@ -8,7 +8,7 @@
 
 [![Discord](https://dcbadge.limes.pink/api/server/YkQrXW6TXF?style=for-the-badge)](https://discord.gg/YkQrXW6TXF) -->
 
-:wave: **„Wanchan“ yra „Yomitan“ atšaka (angl. fork), kuri savo ruožtu kilo iš  (https://foosoft.net/posts/passing-the-torch-to-yomitan/) projekto „Yomichan“** žr.([migracijos gida](https://yomitan.wiki/yomichan-migration/)). Siekdamas sukurti lietuvišką alternatyvą, atlikau pakeitimus, pritaikiau projektą lietuvių kalbai ir jį modernizavau. Tačiau kartu išlaikiau visą pamatinį funkcionalumą, užtikrinantį, kad projektas veiktų naujausiose naršyklių versijose ir prie jo būtų lengva prisidėti.
+:wave: **„Wanchan“ yra „Yomitan“ atšaka (angl. fork), kuri savo ruožtu kilo iš (https://foosoft.net/posts/passing-the-torch-to-yomitan/) projekto „Yomichan“** žr.([migracijos gida](https://yomitan.wiki/yomichan-migration/)). Siekdamas sukurti lietuvišką alternatyvą, atlikau pakeitimus, pritaikiau projektą lietuvių kalbai ir jį modernizavau. Tačiau kartu išlaikiau visą pamatinį funkcionalumą, užtikrinantį, kad projektas veiktų naujausiose naršyklių versijose ir prie jo būtų lengva prisidėti.
 
 📢 **Nauji bendraautoriai [laukiami](#prisidėjimas-contributing)!**
 
@@ -43,7 +43,7 @@
 Išleistos dvi versijos: _stabili (stable)_ ir _testinė (testing)_. Jei išmanote technologijas, siūlome išbandyti _testinę_ versiją, kitu atveju geriausia rinktis _stabilią_ (nuorodos kol kas veda į Yomitan, Wanchan nuorodos bus atnaujintos vėliau).
 
 - **Google Chrome**
-  - [stabili](https://chrome.google.com/webstore/detail/yomitan/likgccmbimhjbgkjambclfkhldnlhbnn)
+  - [stabili](https://chromewebstore.google.com/detail/wanchan-i%C5%A1%C5%A1okantis-%C5%BEodyna/kgnnjpmaiaoaabejgaoibhchamifdppg)
   - [testinė](https://chrome.google.com/webstore/detail/yomitan-development-build/glnaenfapkkecknnmginabpmgkenenml)
 
 - **Mozilla Firefox**
