@@ -1,3 +1,5 @@
+<img width="1400" height="560" alt="Wanchan1400x560" src="https://github.com/user-attachments/assets/fd86ffb9-806d-4337-99ee-dd95e1898fd2" />
+
 # Wanchan (Yomitan atšaka)
 
 <!-- (nuorodos kol kas veda į Yomitan, Wanchan nuorodos bus atnaujintos vėliau).
